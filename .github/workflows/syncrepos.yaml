@@ -48,6 +48,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: master
-          commit_message: $COMMIT_MESSAGE
+          commit_message: "$COMMIT_MESSAGE"
           keep_files: true
       - run: ls -lags
