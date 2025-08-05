@@ -9,8 +9,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  checkout:
+  sync_lecture:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout our semester-repo
         uses: actions/checkout@v4
@@ -23,12 +25,6 @@ jobs:
           fetch-depth: 0
           ref: _gfm
           path: _gfm
-  message:
-    runs-on: ubuntu-latest
-    needs: checkout
-    outputs:
-      COMMIT_MESSAGE: ${{ steps.message.outputs.COMMIT_MESSAGE }}
-    steps:
       - name: Change dir into lecture repo
         run: cd _gfm/
       - name: Retrieve last commit message
@@ -36,12 +32,6 @@ jobs:
         run: echo "COMMIT_MESSAGE=$(git log -1 --format=%s)" >> "$GITHUB_OUTPUT"
       - name: Change dir back
         run: cd ..
-  deploy:
-    runs-on: ubuntu-latest
-    needs: message
-    permissions:
-      contents: write
-    steps:
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
@@ -55,5 +45,5 @@ jobs:
       - name: Commit and push
         run: |
           git add -f .
-          git commit -m '${{ needs.message.outputs.COMMIT_MESSAGE }}'
+          git commit -m '${{ steps.message.outputs.COMMIT_MESSAGE }}'
           git push
