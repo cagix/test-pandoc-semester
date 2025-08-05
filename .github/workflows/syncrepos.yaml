@@ -1,0 +1,47 @@
+name: Update Generated GitHub Preview
+
+on:
+  # scheduled
+  schedule:
+    # every day at 5:30 and 17:30 UTC
+    - cron:  "30 5,17 * * *"
+  # triggered manually
+  workflow_dispatch:
+
+jobs:
+  syncrepos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout our semester-repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Checkout external lecture-repo (_gfm branch)
+        uses: actions/checkout@v4
+        with:
+          repository: cagix/test-pandoc-lecture
+          path: _gfm
+          fetch-depth: 0
+          ref: _gfm
+      - name: Retrieve last commit message
+        id: message
+        run: |
+          cd _gfm
+          echo "MESSAGE=${{ github.event.head_commit.message }}" >> "${GITHUB_OUTPUT}"
+          cd ..
+      - name: Clean up old files to recognize deleted files
+        run: rm -rf admin/ lecture/ homework/
+      - name: Copy files over
+        run: cp -r _gfm/* .
+      - name: Remove copy of lecture repo
+        run: rm -rf _gfm
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: master
+          commit_message: ${{ steps.message.outputs.MESSAGE }}
+          keep_files: true
