@@ -50,4 +50,5 @@ jobs:
           publish_branch: master
           commit_message: ${{ steps.message.outputs.COMMIT_MESSAGE }}
           keep_files: true
+          exclude_assets: ''
       - run: ls -lags
