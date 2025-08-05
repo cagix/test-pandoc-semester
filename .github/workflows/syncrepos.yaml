@@ -32,9 +32,12 @@ jobs:
         id: message
         run: |
           cd _gfm
-          echo "MESSAGE=${{ github.event.head_commit.message }}" >> "${GITHUB_OUTPUT}"
+          git show -s --format=%s > $message
+          echo $message
+          echo "MESSAGE=$message" >> "${GITHUB_OUTPUT}"
           cd ..
       - run: echo ${{ steps.message.outputs.MESSAGE }}
+      - run: echo $message
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
