@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - run: ls -lags
       - name: Checkout external lecture-repo (_gfm branch)
         uses: actions/checkout@v4
         with:
@@ -25,18 +26,22 @@ jobs:
           path: _gfm
           fetch-depth: 0
           ref: _gfm
+      - run: ls -lags
+      - run: ls -lags _gfm
       - name: Retrieve last commit message
         id: message
         run: |
           cd _gfm
           echo "MESSAGE=${{ github.event.head_commit.message }}" >> "${GITHUB_OUTPUT}"
           cd ..
+      - run: echo ${{ steps.message.outputs.MESSAGE }}
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
         run: cp -r _gfm/* .
       - name: Remove copy of lecture repo
         run: rm -rf _gfm
+      - run: ls -lags
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -45,3 +50,4 @@ jobs:
           publish_branch: master
           commit_message: ${{ steps.message.outputs.MESSAGE }}
           keep_files: true
+      - run: ls -lags
