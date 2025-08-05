@@ -34,7 +34,7 @@ jobs:
           cd _gfm
           echo ::set-env name=COMMIT_MESSAGE::$(git log -1 --format=%s)
           cd ..
-      - run: echo "Die letzte Commit-Nachricht ist: ${{ env.COMMIT_MESSAGE }}"
+      - run: echo "${{ env.COMMIT_MESSAGE }}"
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
