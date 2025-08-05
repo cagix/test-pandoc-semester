@@ -9,10 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync_lecture:
+  checkout:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout our semester-repo
         uses: actions/checkout@v4
@@ -21,28 +19,41 @@ jobs:
       - name: Checkout external lecture-repo (_gfm branch)
         uses: actions/checkout@v4
         with:
-          repository: cagix/test-pandoc-lecture
+          repository: cagix/test-pandoc-lecture  ##
           fetch-depth: 0
           ref: _gfm
           path: _gfm
+  message:
+    runs-on: ubuntu-latest
+    needs: checkout
+    outputs:
+      COMMIT_MESSAGE: ${{ steps.message.outputs.COMMIT_MESSAGE }}
+    steps:
+      - name: Change dir into lecture repo
+        run: cd _gfm/
       - name: Retrieve last commit message
         id: message
-        run: |
-          cd _gfm
-          echo "COMMIT_MESSAGE=$(git log -1 --format=%s)" >> "$GITHUB_OUTPUT"
-          cd ..
+        run: echo "COMMIT_MESSAGE=$(git log -1 --format=%s)" >> "$GITHUB_OUTPUT"
+      - name: Change dir back
+        run: cd ..
+  deploy:
+    runs-on: ubuntu-latest
+    needs: message
+    permissions:
+      contents: write
+    steps:
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
         run: cp -r _gfm/* .
       - name: Remove copy of lecture repo
-        run: rm -rf _gfm
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: master
-          commit_message: ${{ steps.message.outputs.COMMIT_MESSAGE }}
-          keep_files: true
-          exclude_assets: ''
+        run: rm -rf _gfm/
+      - name: Setup git
+        run: |
+          git config user.name "cagix"
+          git config user.email "cagix@users.noreply.github.com"
+      - name: Commit and push
+        run: |
+          git add -f .
+          git commit -m '${{ needs.message.outputs.COMMIT_MESSAGE }}'
+          git push
