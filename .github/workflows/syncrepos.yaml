@@ -44,6 +44,10 @@ jobs:
           git config user.email "cagix@users.noreply.github.com"
       - name: Commit and push
         run: |
-          git add -f .
-          git commit -m '${{ steps.message.outputs.COMMIT_MESSAGE }}'
-          git push
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add -f .
+            git commit -m '${{ steps.message.outputs.COMMIT_MESSAGE }}'
+            git push
+          else
+            echo "no changes to push"
+          fi
