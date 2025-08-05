@@ -32,12 +32,10 @@ jobs:
         id: message
         run: |
           cd _gfm
-          git show -s --format=%s > $message
-          echo $message
-          echo "MESSAGE=$message" >> "${GITHUB_OUTPUT}"
+          COMMIT_MESSAGE=$(git log -1 --format=%s)
+          echo "COMMIT_MESSAGE=${COMMIT_MESSAGE}" >> $GITHUB_ENV
           cd ..
-      - run: echo ${{ steps.message.outputs.MESSAGE }}
-      - run: echo $message
+      - run: echo "Die letzte Commit-Nachricht ist: ${{ env.COMMIT_MESSAGE }}"
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
@@ -51,6 +49,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: master
-          commit_message: ${{ steps.message.outputs.MESSAGE }}
+          commit_message: ${{ env.COMMIT_MESSAGE }}
           keep_files: true
       - run: ls -lags
