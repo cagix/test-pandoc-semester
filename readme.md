@@ -1,13 +1,5 @@
 # IFM 3.1 (PO23) / IFM 5.21 (PO18): Compilerbau (Winter 2024/25)
 
-foo bar FOOBAR wuppie fluppie
-
-1
-
-2
-
-3
-
 <img src="admin/images/architektur_cb.png" width="80%">
 
 ## Kursbeschreibung

@@ -6,8 +6,6 @@
 >
 > <summary><strong>🎯 TL;DR</strong></summary>
 >
-> FOO BAR WUPPIE FLUPPIE
->
 > Text für TL;DR …
 >
 > In Parr ([2014](#ref-Parr2014)) wird geschrieben, blablablabla …
@@ -1127,11 +1125,11 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 **Exceptions:**
 
 - test from yaml (challenges)
-- “Foo” by me on void.extern.com
-- “FooFOOOO” by me on void.intern.com
 - [“A Note About Git Commit
   Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
   by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- “Foo” by me on void.extern.com
+- “FooFOOOO” by me on void.intern.com
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> 7998196 (gfm: extend workaround to ordered lists, 2025-07-29)<br></sub></sup></p></blockquote>
 

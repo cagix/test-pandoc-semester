@@ -1,6 +1,6 @@
 # Praktikum
 
-HIIIEEEERRR finden Sie die Übungsblätter.
+Hier finden Sie die Übungsblätter.
 
 ------------------------------------------------------------------------
 
