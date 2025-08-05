@@ -32,8 +32,7 @@ jobs:
         id: message
         run: |
           cd _gfm
-          COMMIT_MESSAGE=$(git log -1 --format=%s)
-          echo "COMMIT_MESSAGE=${COMMIT_MESSAGE}" >> $GITHUB_ENV
+          echo ::set-env name=COMMIT_MESSAGE::$(git log -1 --format=%s)
           cd ..
       - run: echo "Die letzte Commit-Nachricht ist: ${{ env.COMMIT_MESSAGE }}"
       - name: Clean up old files to recognize deleted files
