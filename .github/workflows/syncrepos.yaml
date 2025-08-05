@@ -32,9 +32,9 @@ jobs:
         id: message
         run: |
           cd _gfm
-          echo ::set-env name=COMMIT_MESSAGE::$(git log -1 --format=%s)
+          echo "COMMIT_MESSAGE=$(git log -1 --format=%s)" >> $GITHUB_ENV
           cd ..
-      - run: echo "${{ env.COMMIT_MESSAGE }}"
+      - run: echo "$COMMIT_MESSAGE"
       - name: Clean up old files to recognize deleted files
         run: rm -rf admin/ lecture/ homework/
       - name: Copy files over
@@ -48,6 +48,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: master
-          commit_message: ${{ env.COMMIT_MESSAGE }}
+          commit_message: $COMMIT_MESSAGE
           keep_files: true
       - run: ls -lags
