@@ -2,11 +2,6 @@
 
 <img src="admin/images/architektur_cb.png" width="80%">
 
-1
-2
-3
-4444
-
 ## Kursbeschreibung
 
 Der Compiler ist das wichtigste Werkzeug in der Informatik. In der
@@ -72,7 +67,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
 
 | Monat | Woche | Vorlesung | Lead | Abgabe Aufgabenblatt | Vorstellung Praktikum |
 |:---|:---|:---|:---|:---|:---|
-| Oktober | 43 | 23.: [CFG](lecture/02-parsing/cfg.md) | Carsten, BC |  |  |
+| Oktober | 43 | 23.: [CFG](lecture/02-parsing/cfg.md) \|\| [B04](homework/sheet04.md) <br> [B04](homework/sheet04.md) <br> [B04](homework/sheet04.md) | Carsten, BC |  |  |
 |  | 44 | 29.: **18:00 - 19:30 Uhr (online): Edmonton I: ANTLR + Live-Coding** | *Edmonton* |  |  |
 |  | 44 | 30.: [Parser mit ANTLR](lecture/02-parsing/antlr-parsing.md) | Carsten |  |  |
 | November | 45 | 06.: *Dienstbesprechung* |  | 04.: [B01](homework/sheet01.md) CFG | ~~04.~~ **07. 08:00** / 05. / 08. (BC, *Präsenz*) |
@@ -178,4 +173,4 @@ Hier steht vielleicht noch mehr - zentrales Readme mit detaillierter
 Lizenz und Credits. (Nicht mit generiertem Lizenz-Footer aus cb.yaml
 verwechseln.)
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> fbf86ba (add some 'no_pdf' and 'no_beamer' to test our augmented action, 2025-05-11)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 2c1a957 (markdown: switch to leaner yaml header (#1), 2025-08-08)<br></sub></sup></p></blockquote>

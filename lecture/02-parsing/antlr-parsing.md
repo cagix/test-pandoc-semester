@@ -624,7 +624,8 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 > - k3: Benannte Alternativen und Regel-Elemente
 > - k2: Aufbau des Parse-Tree
 > - k3: Umgang mit Kontext-Objekten
-> - k3: Traversierung des Parse-Tree mit den generierten Listenern oder Visitors
+> - k3: Traversierung des Parse-Tree mit den generierten Listenern oder
+>   Visitors
 >
 > </details>
 >
@@ -689,4 +690,4 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 0de6bd3 (shift headings: use h1 as top-level headings to simplify tooling, 2025-04-23)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 2c1a957 (markdown: switch to leaner yaml header (#1), 2025-08-08)<br></sub></sup></p></blockquote>

@@ -12,4 +12,4 @@ beispielsweise die LL- und die LR-Parser.
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 0de6bd3 (shift headings: use h1 as top-level headings to simplify tooling, 2025-04-23)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 2c1a957 (markdown: switch to leaner yaml header (#1), 2025-08-08)<br></sub></sup></p></blockquote>

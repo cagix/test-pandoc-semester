@@ -411,4 +411,4 @@ Hier entsteht ein Tafelbild.
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> a8f91d6 (test for improved slide numbering, 2025-05-15)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 2c1a957 (markdown: switch to leaner yaml header (#1), 2025-08-08)<br></sub></sup></p></blockquote>

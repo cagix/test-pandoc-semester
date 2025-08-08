@@ -345,7 +345,7 @@ implementieren.)
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f338c23 (homework: remove 'Ax.y:' ... we use numbered headings in pdf now, 2025-04-23)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 2c1a957 (markdown: switch to leaner yaml header (#1), 2025-08-08)<br></sub></sup></p></blockquote>
 
 [^1]: Um den Text lesbar zu halten, wird hier oft nur von “Parser”
     gesprochen - gemeint ist aber die gesamte auf diesem Blatt zu
