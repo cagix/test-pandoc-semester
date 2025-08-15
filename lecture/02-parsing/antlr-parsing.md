@@ -1,6 +1,6 @@
 # Parser mit ANTLR generieren
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > <details open>
 >
@@ -56,6 +56,8 @@
 > Kontextobjekt angelegt, welches `public` sichtbar ist.
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -610,9 +612,7 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 - Parr ([2014](#ref-Parr2014))
 
-------------------------------------------------------------------------
-
-> [!TIP]
+> [!NOTE]
 >
 > <details>
 >
@@ -628,6 +628,8 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 >   Visitors
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >

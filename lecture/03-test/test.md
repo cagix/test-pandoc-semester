@@ -1,6 +1,6 @@
 # Test Markdown
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > <details open>
 >
@@ -148,6 +148,8 @@
 > felis non placerat. Integer fermentum vel velit sed auctor.
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -160,10 +162,12 @@
 >   Medienportal)](https://www.hsbi.de/medienportal/m/3a44c8a32e7699db77ae922c6b8944acf0d8c65b78d02859e707ffdf783ea45a78200312cdb8102c1052f382101b69a5092bcaf0a11ded36b98f4552a4aca345)
 >
 > </details>
+
+> [!NOTE]
 >
 > <details>
 >
-> <summary><strong>🖇 Unterlagen</strong></summary>
+> <summary><strong>🖇 Weitere Unterlagen</strong></summary>
 >
 > - [Folien (raw
 >   link)](https://raw.githubusercontent.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/master/lecture/nn/files/NN03-Logistische_Regression.pdf)
@@ -235,8 +239,8 @@ g_i^{(t+1)} = \left\{
 ``` math
 g_i^{(t+1)} = \left\{
 \begin{array}{rll}
-    \neg & g_i^{(t)} & \mbox{ falls } \chi_i \le p_{mut}\\[5pt]
-    & g_i^{(t)} & \mbox{ sonst }
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
 \end{array}
 \right.
 ```
@@ -255,6 +259,70 @@ Mathe-Umgebung, d.h. hier wären extra `$$`
     \end{eqnarray}$$
 
 should become
+
+``` math
+\begin{eqnarray}
+S &\rightarrow& a A                      \nonumber \\
+A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
+B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
+C &\rightarrow& \epsilon                 \nonumber
+\end{eqnarray}
+```
+
+### Tests
+
+#### Inline Math
+
+`array` as inline math:
+
+$`\begin{array}{rll}
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
+\end{array}`$
+
+`eqnarray` as inline math:
+
+$`\begin{eqnarray}
+S &\rightarrow& a A                      \nonumber \\
+A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
+B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
+C &\rightarrow& \epsilon                 \nonumber
+\end{eqnarray}`$
+
+#### Block Math
+
+`array` as block math:
+
+``` math
+\begin{array}{rll}
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
+\end{array}
+```
+
+`eqnarray` as block math:
+
+``` math
+\begin{eqnarray}
+S &\rightarrow& a A                      \nonumber \\
+A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
+B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
+C &\rightarrow& \epsilon                 \nonumber
+\end{eqnarray}
+```
+
+#### Newline after `$$`
+
+`array` as block math w/ newline:
+
+``` math
+  \begin{array}{rll}
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
+  \end{array}
+```
+
+`eqnarray` as block math w/ newline:
 
 ``` math
 \begin{eqnarray}
@@ -1018,9 +1086,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 - Nystrom ([2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
 - ([Nystrom 2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
 
-------------------------------------------------------------------------
-
-> [!TIP]
+> [!NOTE]
 >
 > <details>
 >
@@ -1032,6 +1098,8 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 > - k3: K3.2
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -1041,6 +1109,8 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 >   (ILIAS)](https://www.hsbi.de/elearning/goto.php?target=tst_1106241&client_id=FH-Bielefeld)
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -1143,14 +1213,14 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- “FooFOOOO” by me on void.intern.com
+- test from yaml (challenges)
 - [“A Note About Git Commit
   Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
   by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- “FooFOOOO” by me on void.intern.com
 - “Foo” by me on void.extern.com
-- test from yaml (challenges)
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> a7e6776 (add test case for https://github.com/cagix/pandoc-lecture-zen/issues/52, 2025-08-13)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> ccdfad0 (make test more robust, 2025-08-15)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
