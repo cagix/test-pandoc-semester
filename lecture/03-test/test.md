@@ -450,7 +450,7 @@ via web (raw)</p>
 
 ------------------------------------------------------------------------
 
-breites Bild über HTTP mit `origin`-Span, keine Breiteangabe:
+breites Bild über HTTP mit `credits`-Span, keine Breiteangabe:
 
 <p align="center"><img src="https://raw.githubusercontent.com/cagix/pandoc-thesis/refs/heads/master/figs/wuppie.png"></p><p align="center">“wuppie”
 via web (raw) (Quelle: “FooFOOOO” by me on void.intern.com)</p>
@@ -983,6 +983,30 @@ Quelle: [“A Note About Git Commit
 Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 by [Tim Pope](https://tpo.pe/) on tbaggery.com
 
+------------------------------------------------------------------------
+
+Use `[bla]{.credits nolist=true}` to put a nicely formatted reference to
+the original sources in the text without adding it to the list of
+exceptions to our licence (just giving credits):
+
+Quelle: Test 1: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Note: Using the attribute “nolist” with any value would prevent this
+span from being included in the exceptions list since values will be
+read as string in the filter. So even `[bla]{.credits nolist=false}`
+will work:
+
+Quelle: Test 2: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Quelle: Test 3: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Quelle: Test 4: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Quelle: Test 5: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Do not use the old `origin` span anymore - superceded by `credits`.
+<span class="origin">This should emit a warning…</span>
+
 ## Filters
 
 ### ShowMe
@@ -1147,7 +1171,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 > This should appear only in GFM/Docsify/PDF, but NOT in Beamer
 > (i.e. not in license statement!).
 >
-> Quelle: test from yaml (challenges)
+> Quelle: test from yaml (challenges) - should not appear in slides
 >
 > </details>
 
@@ -1213,14 +1237,14 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- test from yaml (challenges)
+- “Foo” by me on void.extern.com
+- “FooFOOOO” by me on void.intern.com
+- test from yaml (challenges) - should not appear in slides
 - [“A Note About Git Commit
   Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
   by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- “FooFOOOO” by me on void.intern.com
-- “Foo” by me on void.extern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> ccdfad0 (make test more robust, 2025-08-15)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 48427fb (add more tests (credits), 2025-08-22)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
