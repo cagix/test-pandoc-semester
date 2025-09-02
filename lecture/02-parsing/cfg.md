@@ -4,7 +4,7 @@
 >
 > <details>
 >
-> <summary><strong>🖇 Unterlagen</strong></summary>
+> <summary><strong>🖇 Weitere Unterlagen</strong></summary>
 >
 > - [Annotierte Folien: CFG,
 >   LL-Parser](https://raw.githubusercontent.com/Compiler-CampusMinden/AnnotatedSlides/master/frontend_parsing_cfg.ann.ba.pdf)
@@ -355,9 +355,7 @@ Hier entsteht ein Tafelbild.
 - Aho u. a. ([2023](#ref-Aho2023))
 - Hopcroft, Motwani, und Ullman ([2003](#ref-hopcroft2003))
 
-------------------------------------------------------------------------
-
-> [!TIP]
+> [!NOTE]
 >
 > <details>
 >

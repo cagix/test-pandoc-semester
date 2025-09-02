@@ -1,6 +1,6 @@
 # Test Markdown
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > <details open>
 >
@@ -148,6 +148,8 @@
 > felis non placerat. Integer fermentum vel velit sed auctor.
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -160,10 +162,12 @@
 >   Medienportal)](https://www.hsbi.de/medienportal/m/3a44c8a32e7699db77ae922c6b8944acf0d8c65b78d02859e707ffdf783ea45a78200312cdb8102c1052f382101b69a5092bcaf0a11ded36b98f4552a4aca345)
 >
 > </details>
+
+> [!NOTE]
 >
 > <details>
 >
-> <summary><strong>🖇 Unterlagen</strong></summary>
+> <summary><strong>🖇 Weitere Unterlagen</strong></summary>
 >
 > - [Folien (raw
 >   link)](https://raw.githubusercontent.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/master/lecture/nn/files/NN03-Logistische_Regression.pdf)
@@ -235,8 +239,8 @@ g_i^{(t+1)} = \left\{
 ``` math
 g_i^{(t+1)} = \left\{
 \begin{array}{rll}
-    \neg & g_i^{(t)} & \mbox{ falls } \chi_i \le p_{mut}\\[5pt]
-    & g_i^{(t)} & \mbox{ sonst }
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
 \end{array}
 \right.
 ```
@@ -255,6 +259,70 @@ Mathe-Umgebung, d.h. hier wären extra `$$`
     \end{eqnarray}$$
 
 should become
+
+``` math
+\begin{eqnarray}
+S &\rightarrow& a A                      \nonumber \\
+A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
+B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
+C &\rightarrow& \epsilon                 \nonumber
+\end{eqnarray}
+```
+
+### Tests
+
+#### Inline Math
+
+`array` as inline math:
+
+$`\begin{array}{rll}
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
+\end{array}`$
+
+`eqnarray` as inline math:
+
+$`\begin{eqnarray}
+S &\rightarrow& a A                      \nonumber \\
+A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
+B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
+C &\rightarrow& \epsilon                 \nonumber
+\end{eqnarray}`$
+
+#### Block Math
+
+`array` as block math:
+
+``` math
+\begin{array}{rll}
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
+\end{array}
+```
+
+`eqnarray` as block math:
+
+``` math
+\begin{eqnarray}
+S &\rightarrow& a A                      \nonumber \\
+A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
+B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
+C &\rightarrow& \epsilon                 \nonumber
+\end{eqnarray}
+```
+
+#### Newline after `$$`
+
+`array` as block math w/ newline:
+
+``` math
+  \begin{array}{rll}
+    \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
+    & g_i^{(t)} & \text{ sonst }
+  \end{array}
+```
+
+`eqnarray` as block math w/ newline:
 
 ``` math
 \begin{eqnarray}
@@ -382,7 +450,7 @@ via web (raw)</p>
 
 ------------------------------------------------------------------------
 
-breites Bild über HTTP mit `origin`-Span, keine Breiteangabe:
+breites Bild über HTTP mit `credits`-Span, keine Breiteangabe:
 
 <p align="center"><img src="https://raw.githubusercontent.com/cagix/pandoc-thesis/refs/heads/master/figs/wuppie.png"></p><p align="center">“wuppie”
 via web (raw) (Quelle: “FooFOOOO” by me on void.intern.com)</p>
@@ -446,6 +514,56 @@ mit div drumherum:
 - In VSC preview as well as in LaTeX images via web like
   https://github.com/cagix/pandoc-thesis/blob/master/figs/wuppie.png do
   not work (**need to be “raw”**)
+
+------------------------------------------------------------------------
+
+### Images from Web (LaTeX backend)
+
+When converting to LaTeX (PDF, Beamer), Pandoc will attempt to download
+the referred images. However, recently a lot of sites deny this. It
+seems we need to set an user-agent.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%">
+
+Quelle: [Turing Test version
+3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
+by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
+Commons ([Public
+Domain](https://en.wikipedia.org/wiki/en:public_domain))
+
+The conversion above will fail with
+
+    Could not convert image /tmp/tex2pdf.-c72add2811a5b622/3d299b2a35aa76ba2acfef6d4887a64d6ea8e601.txt: Cannot load file
+      Jpeg Invalid marker used
+      PNG Invalid PNG file, signature broken
+      Bitmap Invalid Bitmap magic identifier
+      GIF Invalid Gif signature : Please
+      HDR Invalid radiance file signature
+      Tiff Invalid endian tag value
+      TGA not enough bytes
+    Error producing PDF.
+    ! LaTeX Error: Unknown graphics extension: .txt.
+
+    See the LaTeX manual or LaTeX Companion for explanation.
+    Type  H <return>  for immediate help.
+     ...
+
+    l.1089 ...b2a35aa76ba2acfef6d4887a64d6ea8e601.txt}
+
+unless there is a user-agent defined like
+
+``` yaml
+request-headers:
+  - ["User-Agent", "Mozilla/5.0"]
+```
+
+**Note**: This is only needed, when Pandoc attempts to download the
+image locally, i.e. when converting to LaTeX based formats like PDF or
+Beamer. No need to set this for web based formats like GFM or Markdown
+since we just leave the link as it is.
+
+(see https://github.com/cagix/pandoc-lecture-zen/issues/57) (see
+https://github.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/issues/455)
 
 ## Tabellen
 
@@ -915,6 +1033,30 @@ Quelle: [“A Note About Git Commit
 Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 by [Tim Pope](https://tpo.pe/) on tbaggery.com
 
+------------------------------------------------------------------------
+
+Use `[bla]{.credits nolist=true}` to put a nicely formatted reference to
+the original sources in the text without adding it to the list of
+exceptions to our licence (just giving credits):
+
+Quelle: Test 1: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Note: Using the attribute “nolist” with any value would prevent this
+span from being included in the exceptions list since values will be
+read as string in the filter. So even `[bla]{.credits nolist=false}`
+will work:
+
+Quelle: Test 2: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Quelle: Test 3: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Quelle: Test 4: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Quelle: Test 5: Eigenes Material basierend auf einer Idee nach XYZ.
+
+Do not use the old `origin` span anymore - superceded by `credits`.
+<span class="origin">This should emit a warning…</span>
+
 ## Filters
 
 ### ShowMe
@@ -1018,9 +1160,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 - Nystrom ([2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
 - ([Nystrom 2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
 
-------------------------------------------------------------------------
-
-> [!TIP]
+> [!NOTE]
 >
 > <details>
 >
@@ -1032,6 +1172,8 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 > - k3: K3.2
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -1041,6 +1183,8 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 >   (ILIAS)](https://www.hsbi.de/elearning/goto.php?target=tst_1106241&client_id=FH-Bielefeld)
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -1077,7 +1221,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 > This should appear only in GFM/Docsify/PDF, but NOT in Beamer
 > (i.e. not in license statement!).
 >
-> Quelle: test from yaml (challenges)
+> Quelle: test from yaml (challenges) - should not appear in slides
 >
 > </details>
 
@@ -1143,14 +1287,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- test from yaml (challenges)
+- “Foo” by me on void.extern.com
 - “FooFOOOO” by me on void.intern.com
 - [“A Note About Git Commit
   Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
   by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- “Foo” by me on void.extern.com
+- [Turing Test version
+  3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
+  by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
+  Commons ([Public
+  Domain](https://en.wikipedia.org/wiki/en:public_domain))
+- test from yaml (challenges) - should not appear in slides
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 (reformat using shorter lines, 2025-08-09)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 81fea6d (test: use unbalanced single and  double quotes mit  backticks, 2025-09-02)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
