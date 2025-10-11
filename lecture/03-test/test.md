@@ -599,6 +599,36 @@ Als Author-Zitat Siek ([2023](#ref-Siek2023racket)) …
 
 ## GFM
 
+### Darkmode vs. Lightmode
+
+Diese Abbildung liegt in drei Varianten im Repo vor: transparenter
+Hintergrund, light, dark. Die Einbindung ist auf “transparent”. Scale
+ist auf 60%. Die Abbildung sollte sich automatisch umstellen.
+
+<img src="img/dimensionen-ki.png" width="60%">
+
+<p align="center"><img src="img/dimensionen-ki.png" width="40%"></p><p align="center">Hier
+könnte ihre Werbung stehen.</p>
+
+Nachfolgend die “light”-Variante direkt:
+
+<img src="img/dimensionen-ki_light.png" width="60%">
+
+Nachfolgend die “dark”-Variante direkt:
+
+<img src="img/dimensionen-ki_dark.png" width="60%">
+
+Nachfolgend eine Abbildung, die es nicht in light/dark im Repo gibt. Wie
+verhält sich die Preview, so lange nicht beim Übersetzen die light- und
+dark-Varianten mit generiert werden?
+
+<img src="img/test_transparentbackground.png" width="40%">
+
+Und noch einmal, diesmal mit Caption.
+
+<p align="center"><img src="img/test_transparentbackground.png" width="40%"></p><p align="center">Hier
+könnte ihre Werbung stehen.</p>
+
 ### Details
 
 <details>
@@ -1287,19 +1317,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- “Foo” by me on void.extern.com
-- “FooFOOOO” by me on void.intern.com
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
+- “Foo” by me on void.extern.com
 - test from yaml (challenges) - should not appear in slides
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- “FooFOOOO” by me on void.intern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 81fea6d (test: use unbalanced single and  double quotes mit  backticks, 2025-09-02)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 27425fe (amend test case for gfm picture, 2025-10-11)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
