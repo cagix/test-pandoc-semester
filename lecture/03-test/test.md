@@ -605,9 +605,9 @@ Diese Abbildung liegt in drei Varianten im Repo vor: transparenter
 Hintergrund, light, dark. Die Einbindung ist auf “transparent”. Scale
 ist auf 60%. Die Abbildung sollte sich automatisch umstellen.
 
-<img src="img/dimensionen-ki.png" width="60%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/dimensionen-ki_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/dimensionen-ki_dark.png"><img src="img/dimensionen-ki.png" width="60%"></picture>
 
-<p align="center"><img src="img/dimensionen-ki.png" width="40%"></p><p align="center">Hier
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/dimensionen-ki_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/dimensionen-ki_dark.png"><img src="img/dimensionen-ki.png" width="40%"></picture></p><p align="center">Hier
 könnte ihre Werbung stehen.</p>
 
 Nachfolgend die “light”-Variante direkt:
@@ -1317,17 +1317,17 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- test from yaml (challenges) - should not appear in slides
+- “FooFOOOO” by me on void.intern.com
+- “Foo” by me on void.extern.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
-- “Foo” by me on void.extern.com
-- test from yaml (challenges) - should not appear in slides
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- “FooFOOOO” by me on void.intern.com
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> 27425fe (amend test case for gfm picture, 2025-10-11)<br></sub></sup></p></blockquote>
 
