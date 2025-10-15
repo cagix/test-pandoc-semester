@@ -417,28 +417,28 @@ will appear as is (also like in LaTeX).
 
 kleines Bild, keine Breiteangabe:
 
-<p align="center"><img src="img/b.png"></p><p align="center">“B”
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture></p><p align="center">“B”
 (small)</p>
 
 ------------------------------------------------------------------------
 
 kleines Bild, mit Titel und Breite:
 
-<p align="center"><img src="img/b.png" width="5%"></p><p align="center">“B”,
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture></p><p align="center">“B”,
 width=“5%”</p>
 
 ------------------------------------------------------------------------
 
 breites Bild, keine Breiteangabe:
 
-<p align="center"><img src="img/wuppie.png"></p><p align="center">“wuppie”
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/wuppie_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/wuppie_dark.png"><img src="img/wuppie.png"></picture></p><p align="center">“wuppie”
 (wide)</p>
 
 ------------------------------------------------------------------------
 
 breites Bild, mit Breiteangabe:
 
-<p align="center"><img src="img/wuppie.png" width="20%"></p><p align="center">“wuppie”,
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/wuppie_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/wuppie_dark.png"><img src="img/wuppie.png" width="20%"></picture></p><p align="center">“wuppie”,
 width=“20%”</p>
 
 ------------------------------------------------------------------------
@@ -461,31 +461,31 @@ Quelle: “Foo” by me on void.extern.com
 
 ohne alles:
 
-<img src="img/b.png">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe:
 
-<img src="img/b.png" width="5%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe (“width”) und titel:
 
-<img src="img/b.png" width="5%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe (“web_width”) und titel:
 
-<img src="img/b.png" width="10%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="10%"></picture>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe (“width” und “web_width”) und titel:
 
-<img src="img/b.png" width="10%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="10%"></picture>
 
 ### Images w/ `img`-Code
 
@@ -505,7 +505,7 @@ mit div drumherum:
 
 <div style="width: 5%;">
 
-<img src="img/b.png">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture>
 
 </div>
 
@@ -622,11 +622,11 @@ Nachfolgend eine Abbildung, die es nicht in light/dark im Repo gibt. Wie
 verhält sich die Preview, so lange nicht beim Übersetzen die light- und
 dark-Varianten mit generiert werden?
 
-<img src="img/test_transparentbackground.png" width="40%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/test_transparentbackground_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/test_transparentbackground_dark.png"><img src="img/test_transparentbackground.png" width="40%"></picture>
 
 Und noch einmal, diesmal mit Caption.
 
-<p align="center"><img src="img/test_transparentbackground.png" width="40%"></p><p align="center">Hier
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/test_transparentbackground_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/test_transparentbackground_dark.png"><img src="img/test_transparentbackground.png" width="40%"></picture></p><p align="center">Hier
 könnte ihre Werbung stehen.</p>
 
 ### Details
@@ -728,11 +728,11 @@ h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
 
 - Bullet point 5 with image
 
-  <img src="img/b.png">
+  <picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture>
 
 - Bullet point 6 with figure
 
-  <p align="center"><img src="img/b.png"></p><p align="center">image
+  <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture></p><p align="center">image
   caption</p>
 
 - Bullet point 7 with code block
@@ -1031,7 +1031,7 @@ expr : e1=expr '*' e2=expr      # MUL
 
 Beim Parsen von “5\*4+3” würde dabei der folgende Parsetree entstehen:
 
-<img src="img/b.png" width="20%">
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="20%"></picture>
 
 wuppie! fluppie! foo? bar …
 
@@ -1322,12 +1322,12 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
   by [Tim Pope](https://tpo.pe/) on tbaggery.com
 - test from yaml (challenges) - should not appear in slides
 - “FooFOOOO” by me on void.intern.com
-- “Foo” by me on void.extern.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
+- “Foo” by me on void.extern.com
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> 27425fe (amend test case for gfm picture, 2025-10-11)<br></sub></sup></p></blockquote>
 
