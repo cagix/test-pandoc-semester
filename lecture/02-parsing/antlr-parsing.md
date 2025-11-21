@@ -1,6 +1,6 @@
 # Parser mit ANTLR generieren
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > <details open>
 >
@@ -54,10 +54,11 @@
 > `exitAlternative`- bzw. `visitAlternative`-Methoden generiert. Für
 > benannte Regel-Elemente wird ein entsprechend benanntes Attribut im
 > Kontextobjekt angelegt, welches `public` sichtbar ist.
->
 > </details>
+
+> [!TIP]
 >
-> <details>
+> <details open>
 >
 > <summary><strong>🎦 Videos</strong></summary>
 >
@@ -181,7 +182,7 @@ Betrachten wir erneut die obige Grammatik.
 
 Die Eingabe von “`a = 42;`” führt zu folgendem Parse-Tree:
 
-<img src="images/hello_ex1.png" width="60%">
+<picture><source media="(prefers-color-scheme: light)" srcset="images/hello_ex1_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/hello_ex1_dark.png"><img src="images/hello_ex1.png" width="60%"></picture>
 
 Diese Eingabe führt zur Erkennung der Token `[ID, WS, =, WS, NUM, ;]`,
 wobei die `WS`-Token verworfen werden und der Parser den Tokenstream
@@ -214,7 +215,7 @@ zu `stmt - 42` vereinfachen.
 Betrachten wir nun die Eingabe `foo = 2+3*4; bar = 3*4+2;`. Diese führt
 zu folgendem Parse-Tree:
 
-<img src="images/hello_ex2.png" width="60%">
+<picture><source media="(prefers-color-scheme: light)" srcset="images/hello_ex2_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/hello_ex2_dark.png"><img src="images/hello_ex2.png" width="60%"></picture>
 
 Wie man sehen kann, sind in der Grammatik die üblichen Vorrangregeln für
 die Operationen `+` und `*` berücksichtigt - die Multiplikation wird in
@@ -375,7 +376,7 @@ s    : expr         {List<EContext> x = $expr.ctx.e();}
 expr : e '*' e ;
 ```
 
-<img src="images/ParserRuleContext.png" width="80%">
+<picture><source media="(prefers-color-scheme: light)" srcset="images/ParserRuleContext_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/ParserRuleContext_dark.png"><img src="images/ParserRuleContext.png" width="80%"></picture>
 
 Jede Regel liefert ein passend zu dieser Regel generiertes
 Kontext-Objekt zurück. Darüber kann man das/die Kontextobjekt(e) der
@@ -446,7 +447,7 @@ ANTLR kann zu dieser Grammatik `calc.g4` einen passenden Listener
 von `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseListener`):
 
-<img src="images/ParseTreeListener.png" width="80%">
+<picture><source media="(prefers-color-scheme: light)" srcset="images/ParseTreeListener_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/ParseTreeListener_dark.png"><img src="images/ParseTreeListener.png" width="80%"></picture>
 
 (Nur “interessante” Methoden gezeigt.)
 
@@ -514,7 +515,7 @@ ANTLR kann zu dieser Grammatik einen passenden Visitor (Interface
 `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseVisitor<T>`):
 
-<img src="images/ParseTreeVisitor.png" width="80%">
+<picture><source media="(prefers-color-scheme: light)" srcset="images/ParseTreeVisitor_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/ParseTreeVisitor_dark.png"><img src="images/ParseTreeVisitor.png" width="80%"></picture>
 
 (Nur “interessante” Methoden gezeigt.)
 
@@ -610,9 +611,7 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 - Parr ([2014](#ref-Parr2014))
 
-------------------------------------------------------------------------
-
-> [!TIP]
+> [!NOTE]
 >
 > <details>
 >
@@ -628,6 +627,8 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 >   Visitors
 >
 > </details>
+
+> [!TIP]
 >
 > <details>
 >
@@ -658,7 +659,6 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 >
 > (Die genauere Sprachdefinition finden Sie bei Bedarf unter
 > [craftinginterpreters.com/the-lox-language.html](https://www.craftinginterpreters.com/the-lox-language.html).)
->
 > </details>
 
 ------------------------------------------------------------------------
@@ -669,8 +669,7 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 >
 > <summary><strong>👀 Quellen</strong></summary>
 >
-> <div id="refs" class="references csl-bib-body hanging-indent"
-> entry-spacing="0">
+> <div id="refs" class="references csl-bib-body hanging-indent">
 >
 > <div id="ref-Parr2014" class="csl-entry">
 >

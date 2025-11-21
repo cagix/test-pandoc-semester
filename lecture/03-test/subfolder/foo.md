@@ -2,9 +2,9 @@
 
 > [!NOTE]
 >
-> <details>
+> <details open>
 >
-> <summary><strong>🖇 Unterlagen</strong></summary>
+> <summary><strong>🖇 Weitere Unterlagen</strong></summary>
 >
 > - [NN1-Das_Perzeptron.pdf](files/NN1-Das_Perzeptron.pdf)
 > - [Annotierte Folien:
