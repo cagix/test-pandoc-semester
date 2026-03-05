@@ -421,6 +421,15 @@ kleines Bild, keine Breiteangabe:
 
 ------------------------------------------------------------------------
 
+Bild in Elternordner, keine Breiteangabe:
+
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="../02-parsing/images/bc_xml-parsing-error_light.png"><source media="(prefers-color-scheme: dark)" srcset="../02-parsing/images/bc_xml-parsing-error_dark.png"><img src="../02-parsing/images/bc_xml-parsing-error.png"></picture></p><p align="center">parsing
+error</p>
+
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="../../admin/images/modulbeschreibung_ba_light.png"><source media="(prefers-color-scheme: dark)" srcset="../../admin/images/modulbeschreibung_ba_dark.png"><img src="../../admin/images/modulbeschreibung_ba.png"></picture></p><p align="center">modulbeschreibung</p>
+
+------------------------------------------------------------------------
+
 kleines Bild, mit Titel und Breite:
 
 <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture></p><p align="center">“B”,
@@ -1311,19 +1320,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+- “FooFOOOO” by me on void.intern.com
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- test from yaml (challenges) - should not appear in slides
+- “Foo” by me on void.extern.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
-- “Foo” by me on void.extern.com
-- test from yaml (challenges) - should not appear in slides
-- “FooFOOOO” by me on void.intern.com
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 27425fe (amend test case for gfm picture, 2025-10-11)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 52bab5e (tests: add some edge cases for the new crawl filter, 2026-03-05)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
