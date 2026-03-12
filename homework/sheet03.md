@@ -344,7 +344,7 @@ implementieren.)
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 (reformat using shorter lines, 2025-08-09)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 (tests: add some no-beamer metadata, 2026-03-10)<br></sub></sup></p></blockquote>
 
 [^1]: Um den Text lesbar zu halten, wird hier oft nur von “Parser”
     gesprochen - gemeint ist aber die gesamte auf diesem Blatt zu

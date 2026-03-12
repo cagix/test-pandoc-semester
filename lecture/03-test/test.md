@@ -196,6 +196,13 @@ Hier ist normaler Markdown-Text, mit **fett** und auch *kursiv*.
 
 Hier die <span class="mark">Pandoc-Markdown</span> mark-Erweiterung.
 
+Hier nochmal eine Stichpunktliste, aber ohne Leerzeile davor
+(`+lists_without_preceding_blankline`):
+
+- Stichpunkt 1
+- Stichpunkt 2
+- Stichpunkt 3
+
 ## Math
 
 ### Inline
@@ -1320,8 +1327,6 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- “FooFOOOO” by me on void.intern.com
-- test from yaml (challenges) - should not appear in slides
 - “Foo” by me on void.extern.com
 - [“A Note About Git Commit
   Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
@@ -1331,8 +1336,10 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
+- test from yaml (challenges) - should not appear in slides
+- “FooFOOOO” by me on void.intern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 52bab5e (tests: add some edge cases for the new crawl filter, 2026-03-05)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> a9b39e9 (add more tests regarding recursive parsing and propagating extensions, 2026-03-12)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 

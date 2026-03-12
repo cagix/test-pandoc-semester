@@ -16,6 +16,8 @@ eines kleinen Compiler-Frontends für C++ ein.
 
 ## Überblick Modulinhalte
 
+Die folgenden Punkte werden wir im Laufe des Semesters diskutieren:
+
 1.  Lexikalische Analyse: Scanner/Lexer
     - Reguläre Sprachen
     - Generierung mit ANTLR
@@ -173,4 +175,4 @@ Hier steht vielleicht noch mehr - zentrales Readme mit detaillierter
 Lizenz und Credits. (Nicht mit generiertem Lizenz-Footer aus cb.yaml
 verwechseln.)
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 (reformat using shorter lines, 2025-08-09)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> a9b39e9 (add more tests regarding recursive parsing and propagating extensions, 2026-03-12)<br></sub></sup></p></blockquote>

@@ -101,4 +101,4 @@ Sie das Parsen des Wortes *1233*.
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 (reformat using shorter lines, 2025-08-09)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 (tests: add some no-beamer metadata, 2026-03-10)<br></sub></sup></p></blockquote>
