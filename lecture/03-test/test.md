@@ -1333,10 +1333,10 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
-- test from yaml (challenges) - should not appear in slides
 - [“A Note About Git Commit
   Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
   by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- test from yaml (challenges) - should not appear in slides
 - “FooFOOOO” by me on void.intern.com
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> a9b39e9 (add more tests regarding recursive parsing and propagating extensions, 2026-03-12)<br></sub></sup></p></blockquote>

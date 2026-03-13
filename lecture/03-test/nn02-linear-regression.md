@@ -183,6 +183,11 @@ J = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y} - y)^2 = \frac{1}{2m} \sum_{i=1}^{m} (h
 > <p align="center"><img src="https://github.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/blob/master/lecture/nn/images/contour_plot_b.png?raw=true" width="40%"></p><p align="center">Abbildung
 > 2</p>
 >
+> <p align="center"><img src="https://raw.githubusercontent.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/refs/heads/master/lecture/nn/images/contour_plot_a.png" width="40%"></p><p align="center">Abbildung
+> 1</p>
+> <p align="center"><img src="https://raw.githubusercontent.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/refs/heads/master/lecture/nn/images/contour_plot_b.png" width="40%"></p><p align="center">Abbildung
+> 2</p>
+>
 > - Erklären Sie, welcher der beiden Fälle nachteilhaft für den
 >   Gradientenabstieg Algorithmus ist. Wo liegt der Nachteil? Wie kann
 >   die Merkmalskalierung dem genannten Nachteil entgegenwirken?
@@ -202,4 +207,4 @@ J = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y} - y)^2 = \frac{1}{2m} \sum_{i=1}^{m} (h
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 (reformat using shorter lines, 2025-08-09)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> f7f2e3e (test raw images from github, 2026-03-13)<br></sub></sup></p></blockquote>
