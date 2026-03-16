@@ -419,6 +419,156 @@ Code ohne alles
 Figures (w/ caption) should be centered like in LaTeX. Inline images
 will appear as is (also like in LaTeX).
 
+### Tests GH vs. Docsify
+
+#### Div und Markdown-Link:
+
+<div style="text-align: center;">
+
+![](img/b.png)
+
+</div>
+
+<p>"B" (small)</p>
+
+(Bild geht auf GH/Docsify, `center` nur Docsify)
+
+#### img (relativ):
+
+<img src="img/b.png" width="5%">
+
+(Bild und Skalierung geht auf GH, auf Docsify nur wenn direkt geladen)
+
+#### img (https)
+
+- `?raw=true`:
+
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+
+- `raw.githubusercontent.com`:
+
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+
+(Bild+Skalierung gehen auf GH und Docsify)
+
+#### picture
+
+- `?raw=true`:
+
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+</picture>
+
+- `raw.githubusercontent.com`:
+
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+</picture>
+
+(Bild+Skalierung+Darkmode gehen auf GH und Docsify)
+
+#### picture mit `<p align>`
+
+- `?raw=true`:
+
+<p align="center">
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+</picture>
+</p><p align="center">
+foo bar wuppie fluppie
+</p>
+
+- `raw.githubusercontent.com`:
+
+<p align="center">
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+</picture>
+</p><p align="center">
+foo bar wuppie fluppie
+</p>
+
+(Bild+Skalierung+Darkmode+Einrückung gehen auf GH und Docsify)
+
+#### figures mit picture und p
+
+- `?raw=true`:
+
+<p align="center">
+<figure>
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+</picture>
+<figcaption>lalelu ... foo!</figcaption>
+</figure>
+</p>
+
+- `raw.githubusercontent.com`:
+
+<p align="center">
+<figure>
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+</picture>
+<figcaption>lalelu ... foo!</figcaption>
+</figure>
+</p>
+
+(Bild+Skalierung+Darkmode gehen auf GH und Docsify; die Einrückung
+scheitert und bräuchte ein `<div>`, was aber auf GH nicht erlaubt ist.)
+
+#### figures mit picture und div
+
+- `?raw=true`:
+
+<div style="text-align: center;">
+<div style="margin: 0 auto;">
+
+<figure>
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+</picture>
+<figcaption>lalelu ... foo!</figcaption>
+</figure>
+
+</div>
+</div>
+
+- `raw.githubusercontent.com`:
+
+<div style="text-align: center;">
+<div style="margin: 0 auto;">
+
+<figure>
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+</picture>
+<figcaption>lalelu ... foo!</figcaption>
+</figure>
+
+</div>
+</div>
+
+(Bild+Skalierung+Darkmode gehen auf GH und Docsify; die Einrückung
+scheitert auf GH)
+
 ### Images with Caption
 
 kleines Bild, keine Breiteangabe:
@@ -1327,19 +1477,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- test from yaml (challenges) - should not appear in slides
 - “Foo” by me on void.extern.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- test from yaml (challenges) - should not appear in slides
 - “FooFOOOO” by me on void.intern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> a9b39e9 (add more tests regarding recursive parsing and propagating extensions, 2026-03-12)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 559ed24 (more tests for images, 2026-03-16)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
