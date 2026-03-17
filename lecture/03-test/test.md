@@ -831,6 +831,11 @@ markdown to be recognized**)
 **gh alerts, written as nested pandoc divs (needs `-t markdown+alerts`
 when writing to markdown to produce the format above)**
 
+currently the markdown reader would not recognize the gh-alert properly
+if the extension `lists_without_preceding_blankline` is activated (see
+https://github.com/jgm/pandoc/issues/11534), so this will fail until
+this issue is fixed:
+
 > [!NOTE]
 >
 > <div class="title">
@@ -884,7 +889,10 @@ when writing to markdown to produce the format above)**
 ------------------------------------------------------------------------
 
 Let’s stick with Pandocs divs in Markdown content and use filters for
-export:
+export. This should work regardless the bugs relating to GH alterts in
+both the reader (https://github.com/jgm/pandoc/issues/11534) and the
+writer (https://github.com/jgm/pandoc/issues/11533), also when using “-f
+markdown+lists_without_preceding_blankline\`:
 
 > [!NOTE]
 >
@@ -908,6 +916,34 @@ export:
 
 (**formatted using custom divs in pandoc-markdown, needs custom
 lua-filter**)
+
+------------------------------------------------------------------------
+
+(**usage in custom divs**)
+
+This should work regardless the bugs relating to GH alterts in both the
+reader and the writer, also when using “-f
+markdown+lists_without_preceding_blankline\`:
+
+> [!IMPORTANT]
+>
+> <details open>
+>
+> <summary><strong>🎯 TL;DR</strong></summary>
+>
+> foobar test
+> </details>
+
+> [!TIP]
+>
+> <details>
+>
+> <summary><strong>🏅 Challenges</strong></summary>
+>
+> prove that $`E = m c^2`$.
+> </details>
+
+------------------------------------------------------------------------
 
 - Export to GH Markdown using [“distinctive
   alerts”](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
@@ -1538,19 +1574,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+- “FooFOOOO” by me on void.intern.com
+- “Foo” by me on void.extern.com
+- test from yaml (challenges) - should not appear in slides
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- “FooFOOOO” by me on void.intern.com
-- test from yaml (challenges) - should not appear in slides
-- “Foo” by me on void.extern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 6506edc (expand tests of github alerts, 2026-03-16)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 9cc94ca (test: remove mark-span, wouldnt work properly with codeboxes as param ..., 2026-03-17)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
