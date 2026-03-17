@@ -431,7 +431,7 @@ will appear as is (also like in LaTeX).
 
 <p>"B" (small)</p>
 
-(Bild geht auf GH/Docsify, `center` nur Docsify)
+(Bild geht auf GH/Docsify, `div/center` nur Docsify)
 
 #### img (relativ):
 
@@ -443,11 +443,11 @@ will appear as is (also like in LaTeX).
 
 - `?raw=true`:
 
-<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="10%">
 
 - `raw.githubusercontent.com`:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="15%">
 
 (Bild+Skalierung gehen auf GH und Docsify)
 
@@ -466,7 +466,7 @@ will appear as is (also like in LaTeX).
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="15%">
 </picture>
 
 (Bild+Skalierung+Darkmode gehen auf GH und Docsify)
@@ -479,7 +479,7 @@ will appear as is (also like in LaTeX).
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
-<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="15%">
 </picture>
 </p><p align="center">
 foo bar wuppie fluppie
@@ -508,7 +508,7 @@ foo bar wuppie fluppie
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
-<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
+<img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="10%">
 </picture>
 <figcaption>lalelu ... foo!</figcaption>
 </figure>
@@ -521,7 +521,7 @@ foo bar wuppie fluppie
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="20%">
 </picture>
 <figcaption>lalelu ... foo!</figcaption>
 </figure>
@@ -630,25 +630,25 @@ ohne alles:
 
 ------------------------------------------------------------------------
 
-mit breitenangabe:
+mit breitenangabe 5%:
 
 <picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture>
 
 ------------------------------------------------------------------------
 
-mit breitenangabe (“width”) und titel:
+mit breitenangabe (“width=15%”) und titel:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture>
+<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="15%"></picture>
 
 ------------------------------------------------------------------------
 
-mit breitenangabe (“web_width”) und titel:
+mit breitenangabe (“web_width=10%”) und titel:
 
 <picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="10%"></picture>
 
 ------------------------------------------------------------------------
 
-mit breitenangabe (“width” und “web_width”) und titel:
+mit breitenangabe (“width=5%” und “web_width=10%”) und titel:
 
 <picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="10%"></picture>
 
@@ -772,19 +772,19 @@ ist auf 60%. Die Abbildung sollte sich automatisch umstellen.
 <picture><source media="(prefers-color-scheme: light)" srcset="img/dimensionen-ki_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/dimensionen-ki_dark.png"><img src="img/dimensionen-ki.png" width="60%"></picture>
 
 <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/dimensionen-ki_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/dimensionen-ki_dark.png"><img src="img/dimensionen-ki.png" width="40%"></picture></p><p align="center">Hier
-könnte ihre Werbung stehen.</p>
+könnte ihre Werbung stehen. (40%)</p>
 
-Nachfolgend die “light”-Variante direkt:
+Nachfolgend die “light”-Variante direkt (60%):
 
 <img src="img/dimensionen-ki_light.png" width="60%">
 
-Nachfolgend die “dark”-Variante direkt:
+Nachfolgend die “dark”-Variante direkt (60%):
 
 <img src="img/dimensionen-ki_dark.png" width="60%">
 
 Nachfolgend eine Abbildung, die es nicht in light/dark im Repo gibt. Wie
 verhält sich die Preview, so lange nicht beim Übersetzen die light- und
-dark-Varianten mit generiert werden?
+dark-Varianten mit generiert werden? (40%)
 
 <picture><source media="(prefers-color-scheme: light)" srcset="img/test_transparentbackground_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/test_transparentbackground_dark.png"><img src="img/test_transparentbackground.png" width="40%"></picture>
 
@@ -823,6 +823,64 @@ GH introduced “alerts” with distinctive styling, like
 (see
 https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/)
 
+(**formatted like in GH, needs `-f markdown+alerts` when reading from
+markdown to be recognized**)
+
+------------------------------------------------------------------------
+
+**gh alerts, written as nested pandoc divs (needs `-t markdown+alerts`
+when writing to markdown to produce the format above)**
+
+> [!NOTE]
+>
+> <div class="title">
+>
+> Note
+>
+> </div>
+>
+> Foo bar, wuppie fluppie!
+
+> [!TIP]
+>
+> <div class="title">
+>
+> Tip
+>
+> </div>
+>
+> Foo bar, wuppie fluppie!
+
+> [!IMPORTANT]
+>
+> <div class="title">
+>
+> Important
+>
+> </div>
+>
+> Foo bar, wuppie fluppie!
+
+> [!WARNING]
+>
+> <div class="title">
+>
+> Warning
+>
+> </div>
+>
+> Foo bar, wuppie fluppie!
+
+> [!CAUTION]
+>
+> <div class="title">
+>
+> Caution
+>
+> </div>
+>
+> Foo bar, wuppie fluppie!
+
 ------------------------------------------------------------------------
 
 Let’s stick with Pandocs divs in Markdown content and use filters for
@@ -847,6 +905,9 @@ export:
 > [!CAUTION]
 >
 > Foo bar, wuppie fluppie!
+
+(**formatted using custom divs in pandoc-markdown, needs custom
+lua-filter**)
 
 - Export to GH Markdown using [“distinctive
   alerts”](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
@@ -1477,19 +1538,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- test from yaml (challenges) - should not appear in slides
-- “Foo” by me on void.extern.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
 - “FooFOOOO” by me on void.intern.com
+- test from yaml (challenges) - should not appear in slides
+- “Foo” by me on void.extern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 559ed24 (more tests for images, 2026-03-16)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 6506edc (expand tests of github alerts, 2026-03-16)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
