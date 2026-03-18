@@ -810,15 +810,15 @@ Lalelu …
 
 GH introduced “alerts” with distinctive styling, like
 
-> \[!NOTE\] Foo bar, wuppie fluppie!
+> \[!NOTE\] NOTE: Foo bar, wuppie fluppie!
 
-> \[!TIP\] Foo bar, wuppie fluppie!
+> \[!TIP\] TIP: Foo bar, wuppie fluppie!
 
-> \[!IMPORTANT\] Foo bar, wuppie fluppie!
+> \[!IMPORTANT\] IMPORTANT: Foo bar, wuppie fluppie!
 
-> \[!WARNING\] Foo bar, wuppie fluppie!
+> \[!WARNING\] WARNING: Foo bar, wuppie fluppie!
 
-> \[!CAUTION\] Foo bar, wuppie fluppie!
+> \[!CAUTION\] CAUTION: Foo bar, wuppie fluppie!
 
 (see
 https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/)
@@ -844,7 +844,7 @@ this issue is fixed:
 >
 > </div>
 >
-> Foo bar, wuppie fluppie!
+> NOTE: Foo bar, wuppie fluppie!
 
 > [!TIP]
 >
@@ -854,7 +854,7 @@ this issue is fixed:
 >
 > </div>
 >
-> Foo bar, wuppie fluppie!
+> TIP: Foo bar, wuppie fluppie!
 
 > [!IMPORTANT]
 >
@@ -864,7 +864,7 @@ this issue is fixed:
 >
 > </div>
 >
-> Foo bar, wuppie fluppie!
+> IMPORTANT: Foo bar, wuppie fluppie!
 
 > [!WARNING]
 >
@@ -874,7 +874,7 @@ this issue is fixed:
 >
 > </div>
 >
-> Foo bar, wuppie fluppie!
+> WARNING: Foo bar, wuppie fluppie!
 
 > [!CAUTION]
 >
@@ -884,7 +884,7 @@ this issue is fixed:
 >
 > </div>
 >
-> Foo bar, wuppie fluppie!
+> CAUTION: Foo bar, wuppie fluppie!
 
 ------------------------------------------------------------------------
 
@@ -896,23 +896,23 @@ markdown+lists_without_preceding_blankline\`:
 
 > [!NOTE]
 >
-> Foo bar, wuppie fluppie! Blablabla third line of nonsense …
+> NOTE: Foo bar, wuppie fluppie!
 
 > [!TIP]
 >
-> Foo bar, wuppie fluppie!
+> TIP: Foo bar, wuppie fluppie!
 
 > [!IMPORTANT]
 >
-> Foo bar, wuppie fluppie!
+> IMPORTANT: Foo bar, wuppie fluppie!
 
 > [!WARNING]
 >
-> Foo bar, wuppie fluppie!
+> WARNING: Foo bar, wuppie fluppie!
 
 > [!CAUTION]
 >
-> Foo bar, wuppie fluppie!
+> CAUTION: Foo bar, wuppie fluppie!
 
 (**formatted using custom divs in pandoc-markdown, needs custom
 lua-filter**)
@@ -1575,18 +1575,18 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 **Exceptions:**
 
 - “FooFOOOO” by me on void.intern.com
-- “Foo” by me on void.extern.com
-- test from yaml (challenges) - should not appear in slides
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
 - [Turing Test version
   3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
   by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
   Commons ([Public
   Domain](https://en.wikipedia.org/wiki/en:public_domain))
+- [“A Note About Git Commit
+  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  by [Tim Pope](https://tpo.pe/) on tbaggery.com
+- “Foo” by me on void.extern.com
+- test from yaml (challenges) - should not appear in slides
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 9cc94ca (test: remove mark-span, wouldnt work properly with codeboxes as param ..., 2026-03-17)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> e432370 (gh-alerts: add name to alert text, 2026-03-18)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
