@@ -36,7 +36,7 @@ jobs:
               id: message
               working-directory: ${{ env.LECTURE_BRANCH }}
               run: |
-                  msg="$(git log -n 1 --pretty=format:'%h %ad %s' --date=short 2>/dev/null || echo 'unversioned')"
+                  msg="$(git log -n 1 --pretty=format:'%s (%ad %h)' --date=short 2>/dev/null || echo 'unversioned')"
                   msg=${msg//\"/}
                   msg=${msg//\'/}
                   msg=${msg//\`/}
