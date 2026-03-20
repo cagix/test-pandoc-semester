@@ -47,6 +47,7 @@ jobs:
               run: |
                   find . -mindepth 1 -maxdepth 1  \
                     ! -name '.git'                \
+                    ! -name '.github'             \
                     ! -name "$LECTURE_BRANCH"     \
                     -exec rm -rf {} +
 
