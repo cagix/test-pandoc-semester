@@ -1,12 +1,17 @@
 name: Update Handout
 
 on:
-  # scheduled
   schedule:
-    # every day at 5:30 and 17:30 UTC
+    # scheduled every day at 5:30 and 17:30 UTC
     - cron:  "30 5,17 * * *"
   # triggered manually
   workflow_dispatch:
+
+env:
+  LECTURE_REPO: cagix/test-pandoc-lecture
+  LECTURE_BRANCH: _handout
+  LECTURE_PATH: _handout
+  TARGET_DIRS: "admin lecture homework"
 
 jobs:
   sync_lecture:
@@ -14,34 +19,40 @@ jobs:
     permissions:
       contents: write
       actions: read
+
     steps:
       - name: Checkout our semester-repo
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Checkout external lecture-repo (_handout branch)
+
+      - name: Checkout external lecture-repo (${{ env.LECTURE_BRANCH }} branch)
         uses: actions/checkout@v6
         with:
-          repository: cagix/test-pandoc-lecture  ##
+          repository: ${{ env.LECTURE_REPO }}
           fetch-depth: 1
-          ref: _handout
-          path: _handout
+          ref: ${{ env.LECTURE_BRANCH }}
+          path: ${{ env.LECTURE_PATH }}
+
       - name: Retrieve last commit message from lecture-repo
         id: message
+        working-directory: ${{ env.LECTURE_PATH }}
         run: |
-          cd _handout/
           msg="$(git log -n 1 --pretty=format:'%h %ad %s' --date=short 2>/dev/null || echo 'unversioned')"
           msg=${msg//\"/}
           msg=${msg//\'/}
           msg=${msg//\`/}
           msg=${msg//\$/}
           echo "COMMIT_MESSAGE=$msg" >> "$GITHUB_OUTPUT"
-          cd ..
+
       - name: Copy files over
         run: |
-          rm -rf admin/ lecture/ homework/
-          cp -r _handout/* .
-          rm -rf _handout/
+          for d in $TARGET_DIRS; do
+            [ -d "$d" ] && rm -rf "$d"
+          done
+          cp -r "$LECTURE_PATH"/* .
+          rm -rf "$LECTURE_PATH"
+
       - name: Commit and push
         env:
           COMMIT_MESSAGE: ${{ steps.message.outputs.COMMIT_MESSAGE }}
