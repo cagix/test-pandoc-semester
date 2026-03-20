@@ -10,7 +10,6 @@ on:
 env:
     LECTURE_REPO: cagix/test-pandoc-lecture
     LECTURE_BRANCH: _handout
-    LECTURE_PATH: _handout
 
 jobs:
     sync_lecture:
@@ -31,11 +30,11 @@ jobs:
                   repository: ${{ env.LECTURE_REPO }}
                   fetch-depth: 1
                   ref: ${{ env.LECTURE_BRANCH }}
-                  path: ${{ env.LECTURE_PATH }}
+                  path: ${{ env.LECTURE_BRANCH }}
 
             - name: Retrieve last commit message from lecture-repo
               id: message
-              working-directory: ${{ env.LECTURE_PATH }}
+              working-directory: ${{ env.LECTURE_BRANCH }}
               run: |
                   msg="$(git log -n 1 --pretty=format:'%h %ad %s' --date=short 2>/dev/null || echo 'unversioned')"
                   msg=${msg//\"/}
@@ -48,11 +47,11 @@ jobs:
               run: |
                   find . -mindepth 1 -maxdepth 1  \
                     ! -name '.git'                \
-                    ! -name "$LECTURE_PATH"       \
+                    ! -name "$LECTURE_BRANCH"     \
                     -exec rm -rf {} +
 
-                  mv "$LECTURE_PATH"/* .
-                  rm -rf "$LECTURE_PATH"
+                  mv "$LECTURE_BRANCH"/* .
+                  rm -rf "$LECTURE_BRANCH"
 
             - name: Commit and push
               env:
