@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
     steps:
       - name: Checkout our semester-repo
         uses: actions/checkout@v6
@@ -22,14 +23,18 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: cagix/test-pandoc-lecture  ##
-          fetch-depth: 0
+          fetch-depth: 1
           ref: _handout
           path: _handout
       - name: Retrieve last commit message from lecture-repo
         id: message
         run: |
           cd _handout/
-          msg="$(git log -n 1 --pretty=reference | sed -e 's/["\\$$`]//g' -e "s/'//g")"
+          msg="$(git log -n 1 --pretty=format:'%h %ad %s' --date=short 2>/dev/null || echo 'unversioned')"
+          msg=${msg//\"/}
+          msg=${msg//\'/}
+          msg=${msg//\`/}
+          msg=${msg//\$/}
           echo "COMMIT_MESSAGE=$msg" >> "$GITHUB_OUTPUT"
           cd ..
       - name: Copy files over
@@ -38,12 +43,14 @@ jobs:
           cp -r _handout/* .
           rm -rf _handout/
       - name: Commit and push
+        env:
+          COMMIT_MESSAGE: ${{ steps.message.outputs.COMMIT_MESSAGE }}
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "cagix"
             git config user.email "cagix@users.noreply.github.com"
             git add -f .
-            git commit -m '${{ steps.message.outputs.COMMIT_MESSAGE }}'
+            git commit -m "$COMMIT_MESSAGE"
             git push
           else
             echo "no changes to push"
