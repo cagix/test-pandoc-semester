@@ -3,19 +3,15 @@
 > [!IMPORTANT]
 >
 > <details open>
->
 > <summary><strong>🎯 TL;DR</strong></summary>
 >
-> Text für TL;DR …
+> Text für TL;DR ...
 >
-> In Parr ([2014](#ref-Parr2014)) wird geschrieben, blablablabla …
+> In Parr ([2014](#ref-Parr2014)) wird geschrieben, blablablabla ...
 >
-> Wir können hier sowohl Inline-Math ($`a^ib^{2*i}`$) als auch
-> Block-Math:
+> Wir können hier sowohl Inline-Math ($a^ib^{2*i}$) als auch Block-Math:
 >
-> ``` math
-> \Phi(\mathbf{g}_i) = F(\Gamma(\mathbf{g}_i)) - w\cdot\sum_j(Z_j(\Gamma(\mathbf{g}_i)))^2
-> ```
+> $$\Phi(\mathbf{g}_i) = F(\Gamma(\mathbf{g}_i)) - w\cdot\sum_j(Z_j(\Gamma(\mathbf{g}_i)))^2$$
 >
 > Code sollte auch gehen: `inline`, aber auch block:
 >
@@ -151,26 +147,24 @@
 > [!TIP]
 >
 > <details open>
->
 > <summary><strong>🎦 Videos</strong></summary>
 >
-> - [VL Parser mit ANTLR (YouTube)](https://youtu.be/YuUHBvPUS4k)
-> - [Demo ANTLR Parser (YouTube)](https://youtu.be/FJOEPY-TMmw)
-> - <https://foo.bar.de>
-> - [VL Git Basics (HSBI
->   Medienportal)](https://www.hsbi.de/medienportal/m/3a44c8a32e7699db77ae922c6b8944acf0d8c65b78d02859e707ffdf783ea45a78200312cdb8102c1052f382101b69a5092bcaf0a11ded36b98f4552a4aca345)
+> -   [VL Parser mit ANTLR (YouTube)](https://youtu.be/YuUHBvPUS4k)
+> -   [Demo ANTLR Parser (YouTube)](https://youtu.be/FJOEPY-TMmw)
+> -   <https://foo.bar.de>
+> -   [VL Git Basics (HSBI
+>     Medienportal)](https://www.hsbi.de/medienportal/m/3a44c8a32e7699db77ae922c6b8944acf0d8c65b78d02859e707ffdf783ea45a78200312cdb8102c1052f382101b69a5092bcaf0a11ded36b98f4552a4aca345)
 >
 > </details>
 
-> [!NOTE]
+> [!TIP]
 >
 > <details open>
->
 > <summary><strong>🖇 Weitere Unterlagen</strong></summary>
 >
-> - [Folien (raw
->   link)](https://raw.githubusercontent.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/master/lecture/nn/files/NN03-Logistische_Regression.pdf)
-> - [Folien](https://github.com/cagix/test-pandoc-lecture/blob/_pdf/lecture_03-test_test.pdf)
+> -   [Folien (raw
+>     link)](https://raw.githubusercontent.com/Artificial-Intelligence-HSBI-TDU/KI-Vorlesung/master/lecture/nn/files/NN03-Logistische_Regression.pdf)
+> -   [Folien](https://github.com/cagix/test-pandoc-lecture/blob/_pdf/lecture_03-test_test.pdf)
 >
 > </details>
 
@@ -184,9 +178,9 @@
 
 Hier ist normaler Markdown-Text, mit **fett** und auch *kursiv*.
 
-- Stichpunkt 1
-- Stichpunkt 2
-- Stichpunkt 3
+-   Stichpunkt 1
+-   Stichpunkt 2
+-   Stichpunkt 3
 
 1.  Aufzählung 1
 2.  Aufzählung 2
@@ -199,57 +193,49 @@ Hier die <span class="mark">Pandoc-Markdown</span> mark-Erweiterung.
 Hier nochmal eine Stichpunktliste, aber ohne Leerzeile davor
 (`+lists_without_preceding_blankline`):
 
-- Stichpunkt 1
-- Stichpunkt 2
-- Stichpunkt 3
+-   Stichpunkt 1
+-   Stichpunkt 2
+-   Stichpunkt 3
 
 ## Math
 
 ### Inline
 
-$`\mathbf{g} = (g_1, \dots, g_m)\in \{ 0,1\}^m`$
+$\mathbf{g} = (g_1, \dots, g_m)\in \{ 0,1\}^m$
 
-- $`a^ib^{2*i}`$ ist nicht regulär
-- $`a^ib^{2*i}`$ für $`0 \leq i \leq 3`$ ist regulär
+-   $a^ib^{2*i}$ ist nicht regulär
+-   $a^ib^{2*i}$ für $0 \leq i \leq 3$ ist regulär
 
 ### Block
 
-``` math
-\Phi(\mathbf{g}_i) = F(\Gamma(\mathbf{g}_i)) - w\cdot\sum_j(Z_j(\Gamma(\mathbf{g}_i)))^2
-```
+$$\Phi(\mathbf{g}_i) = F(\Gamma(\mathbf{g}_i)) - w\cdot\sum_j(Z_j(\Gamma(\mathbf{g}_i)))^2$$
 
-``` math
-p_{sel}(\mathbf{g}_k) = \frac{\Phi(\mathbf{g}_k)}{\sum_j \Phi(\mathbf{g}_j)}
-```
+$$p_{sel}(\mathbf{g}_k) = \frac{\Phi(\mathbf{g}_k)}{\sum_j \Phi(\mathbf{g}_j)}$$
 
-``` math
-g_i^{(t+1)} = \left\{
+$$g_i^{(t+1)} = \left\{
 \begin{array}{ll}
     \neg g_i^{(t)} & \mbox{ falls } \chi_i \le p_{mut}\\[5pt]
     \phantom{\neg} g_i^{(t)} & \mbox{ sonst }
 \end{array}
-\right.
-```
+\right.$$
 
 ------------------------------------------------------------------------
 
 ### Known Problems
 
-- VSCode Preview: `\mbox{ tanh }` =\> $`\mbox{ tanh }`$ =\>
-  `\text{ tanh }` =\> $`\text{ tanh }`$
-- GH Preview:
-  - `\phantom{xyz}` =\> $`\phantom{xyz}`$ =\> ?? =\> ??
-  - `\operatorname{tanh}` =\> $`\operatorname{tanh}`$ =\>
-    `\mathop{\text{tanh}}` =\> $`\mathop{\text{tanh}}`$
+-   VSCode Preview: `\mbox{ tanh }` =\> $\mbox{ tanh }$ =\>
+    `\text{ tanh }` =\> $\text{ tanh }$
+-   GH Preview:
+    -   `\phantom{xyz}` =\> $\phantom{xyz}$ =\> ?? =\> ??
+    -   `\operatorname{tanh}` =\> $\operatorname{tanh}$ =\>
+        `\mathop{\text{tanh}}` =\> $\mathop{\text{tanh}}$
 
-``` math
-g_i^{(t+1)} = \left\{
+$$g_i^{(t+1)} = \left\{
 \begin{array}{rll}
     \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
     & g_i^{(t)} & \text{ sonst }
 \end{array}
-\right.
-```
+\right.$$
 
 <span class="mark">Schwierig</span>: In Pandoc-Markdown muss Mathe mit
 `$` oder `$$` eingeschlossen werden, unabhängig vom konkreten Inhalt. In
@@ -266,14 +252,12 @@ Mathe-Umgebung, d.h. hier wären extra `$$`
 
 should become
 
-``` math
-\begin{eqnarray}
+$$\begin{eqnarray}
 S &\rightarrow& a A                      \nonumber \\
 A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
 B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
 C &\rightarrow& \epsilon                 \nonumber
-\end{eqnarray}
-```
+\end{eqnarray}$$
 
 ### Tests
 
@@ -281,63 +265,59 @@ C &\rightarrow& \epsilon                 \nonumber
 
 `array` as inline math:
 
-$`\begin{array}{rll}
+$\begin{array}{rll}
     \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
     & g_i^{(t)} & \text{ sonst }
-\end{array}`$
+\end{array}$
 
 `eqnarray` as inline math:
 
-$`\begin{eqnarray}
+$\begin{eqnarray}
 S &\rightarrow& a A                      \nonumber \\
 A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
 B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
 C &\rightarrow& \epsilon                 \nonumber
-\end{eqnarray}`$
+\end{eqnarray}$
 
 #### Block Math
 
 `array` as block math:
 
-``` math
-\begin{array}{rll}
+$$\begin{array}{rll}
     \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
     & g_i^{(t)} & \text{ sonst }
-\end{array}
-```
+\end{array}$$
 
 `eqnarray` as block math:
 
-``` math
-\begin{eqnarray}
+$$\begin{eqnarray}
 S &\rightarrow& a A                      \nonumber \\
 A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
 B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
 C &\rightarrow& \epsilon                 \nonumber
-\end{eqnarray}
-```
+\end{eqnarray}$$
 
 #### Newline after `$$`
 
 `array` as block math w/ newline:
 
-``` math
+$$
   \begin{array}{rll}
     \neg & g_i^{(t)} & \text{ falls } \chi_i \le p_{mut}\\[5pt]
     & g_i^{(t)} & \text{ sonst }
   \end{array}
-```
+$$
 
 `eqnarray` as block math w/ newline:
 
-``` math
+$$
 \begin{eqnarray}
 S &\rightarrow& a A                      \nonumber \\
 A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
 B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
 C &\rightarrow& \epsilon                 \nonumber
 \end{eqnarray}
-```
+$$
 
 ## Links
 
@@ -347,7 +327,11 @@ C &\rightarrow& \epsilon                 \nonumber
 
 ### Internal Links
 
-[selbe ebene: readme.md](readme.md)
+[empty link](.)
+
+[link target: .](.)
+
+[selbe ebene: readme.md](./readme.md)
 
 [unterordner: subfolder/foo.md](subfolder/foo.md)
 
@@ -395,6 +379,8 @@ public class Main {
 }
 ```
 
+The preprocessing step, cf. \[@Diehl\]
+
 ------------------------------------------------------------------------
 
 Code ohne alles
@@ -441,11 +427,11 @@ will appear as is (also like in LaTeX).
 
 #### img (https)
 
-- `?raw=true`:
+-   `?raw=true`:
 
 <img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="10%">
 
-- `raw.githubusercontent.com`:
+-   `raw.githubusercontent.com`:
 
 <img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="15%">
 
@@ -453,7 +439,7 @@ will appear as is (also like in LaTeX).
 
 #### picture
 
-- `?raw=true`:
+-   `?raw=true`:
 
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
@@ -461,7 +447,7 @@ will appear as is (also like in LaTeX).
 <img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="5%">
 </picture>
 
-- `raw.githubusercontent.com`:
+-   `raw.githubusercontent.com`:
 
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
@@ -473,7 +459,7 @@ will appear as is (also like in LaTeX).
 
 #### picture mit `<p align>`
 
-- `?raw=true`:
+-   `?raw=true`:
 
 <p align="center">
 <picture>
@@ -485,7 +471,7 @@ will appear as is (also like in LaTeX).
 foo bar wuppie fluppie
 </p>
 
-- `raw.githubusercontent.com`:
+-   `raw.githubusercontent.com`:
 
 <p align="center">
 <picture>
@@ -501,7 +487,7 @@ foo bar wuppie fluppie
 
 #### figures mit picture und p
 
-- `?raw=true`:
+-   `?raw=true`:
 
 <p align="center">
 <figure>
@@ -514,7 +500,7 @@ foo bar wuppie fluppie
 </figure>
 </p>
 
-- `raw.githubusercontent.com`:
+-   `raw.githubusercontent.com`:
 
 <p align="center">
 <figure>
@@ -532,7 +518,7 @@ scheitert und bräuchte ein `<div>`, was aber auf GH nicht erlaubt ist.)
 
 #### figures mit picture und div
 
-- `?raw=true`:
+-   `?raw=true`:
 
 <div style="text-align: center;">
 <div style="margin: 0 auto;">
@@ -549,7 +535,7 @@ scheitert und bräuchte ein `<div>`, was aber auf GH nicht erlaubt ist.)
 </div>
 </div>
 
-- `raw.githubusercontent.com`:
+-   `raw.githubusercontent.com`:
 
 <div style="text-align: center;">
 <div style="margin: 0 auto;">
@@ -569,98 +555,104 @@ scheitert und bräuchte ein `<div>`, was aber auf GH nicht erlaubt ist.)
 (Bild+Skalierung+Darkmode gehen auf GH und Docsify; die Einrückung
 scheitert auf GH)
 
+##### Really deep headings level (h4 to h7 - warning)
+
+Markdown allows level 6 headings, max. When building the book version,
+we need to shift all headings, in this case by 3. So in this example all
+h3 headings will become h6 headings, h4 headings (like this one) would
+become h7 headings, which do not exist. Our filter should emit a warning
+here.
+
+NB: The filter should also warn on h3 headings, as those will be demoted
+to (valid) h6 headings in the first step and due to
+`--shift-heading-level-by=1` in the next processing step would become h7
+headings.
+
 ### Images with Caption
 
 kleines Bild, keine Breiteangabe:
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture></p><p align="center">“B”
-(small)</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p><p align="center">“B” (small)</p>
 
 ------------------------------------------------------------------------
 
 Bild in Elternordner, keine Breiteangabe:
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="../02-parsing/images/bc_xml-parsing-error_light.png"><source media="(prefers-color-scheme: dark)" srcset="../02-parsing/images/bc_xml-parsing-error_dark.png"><img src="../02-parsing/images/bc_xml-parsing-error.png"></picture></p><p align="center">parsing
-error</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/bc_xml-parsing-error.png"  /></p><p align="center">parsing error</p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="../../admin/images/modulbeschreibung_ba_light.png"><source media="(prefers-color-scheme: dark)" srcset="../../admin/images/modulbeschreibung_ba_dark.png"><img src="../../admin/images/modulbeschreibung_ba.png"></picture></p><p align="center">modulbeschreibung</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/admin/images/modulbeschreibung_ba.png"  /></p><p align="center">modulbeschreibung</p>
 
 ------------------------------------------------------------------------
 
 kleines Bild, mit Titel und Breite:
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture></p><p align="center">“B”,
-width=“5%”</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="5%" /></p><p align="center">“B”, width=“5%”</p>
 
 ------------------------------------------------------------------------
 
 breites Bild, keine Breiteangabe:
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/wuppie_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/wuppie_dark.png"><img src="img/wuppie.png"></picture></p><p align="center">“wuppie”
-(wide)</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/wuppie.png"  /></p><p align="center">“wuppie” (wide)</p>
 
 ------------------------------------------------------------------------
 
 breites Bild, mit Breiteangabe:
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/wuppie_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/wuppie_dark.png"><img src="img/wuppie.png" width="20%"></picture></p><p align="center">“wuppie”,
-width=“20%”</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/wuppie.png" width="20%" /></p><p align="center">“wuppie”, width=“20%”</p>
 
 ------------------------------------------------------------------------
 
 breites Bild über HTTP, keine Breiteangabe:
 
-<p align="center"><img src="https://raw.githubusercontent.com/cagix/pandoc-thesis/refs/heads/master/figs/wuppie.png"></p><p align="center">“wuppie”
-via web (raw)</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/pandoc-thesis/refs/heads/master/figs/wuppie.png"  /></p><p align="center">“wuppie” via web (raw)</p>
 
 ------------------------------------------------------------------------
 
 breites Bild über HTTP mit `credits`-Span, keine Breiteangabe:
 
-<p align="center"><img src="https://raw.githubusercontent.com/cagix/pandoc-thesis/refs/heads/master/figs/wuppie.png"></p><p align="center">“wuppie”
-via web (raw) (Quelle: “FooFOOOO” by me on void.intern.com)</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/pandoc-thesis/refs/heads/master/figs/wuppie.png"  /></p><p align="center">“wuppie” via web (raw) (Quelle: “FooFOOOO” by me on void.intern.com)</p>
 
-Quelle: “Foo” by me on void.extern.com
+Quelle: "Foo" by me on void.extern.com
 
 ### Images w/o Caption
 
 ohne alles:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
 
 ------------------------------------------------------------------------
 
 mit breitenangabe 5%:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="5%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="5%" />
 
 ------------------------------------------------------------------------
 
-mit breitenangabe (“width=15%”) und titel:
+mit breitenangabe ("width=15%") und titel:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="15%"></picture>
-
-------------------------------------------------------------------------
-
-mit breitenangabe (“web_width=10%”) und titel:
-
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="10%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="15%" />
 
 ------------------------------------------------------------------------
 
-mit breitenangabe (“width=5%” und “web_width=10%”) und titel:
+mit breitenangabe ("web_width=10%") und titel:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="10%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" />
+
+------------------------------------------------------------------------
+
+mit breitenangabe ("width=5%" und "web_width=10%") und titel:
+
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" />
 
 ### Images w/ `img`-Code
 
-using “5%”:
+using "5%":
 
 <img src="img/b.png" width="5%">
 
 <img src="img/b.png" width="5%">
 
-using “80px”:
+using "80px":
 
 <img src="img/b.png" width="80px">
 
@@ -670,15 +662,15 @@ mit div drumherum:
 
 <div style="width: 5%;">
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
 
 </div>
 
 ### Known Problems
 
-- In VSC preview as well as in LaTeX images via web like
-  https://github.com/cagix/pandoc-thesis/blob/master/figs/wuppie.png do
-  not work (**need to be “raw”**)
+-   In VSC preview as well as in LaTeX images via web like
+    https://github.com/cagix/pandoc-thesis/blob/master/figs/wuppie.png
+    do not work (**need to be "raw"**)
 
 ------------------------------------------------------------------------
 
@@ -688,7 +680,7 @@ When converting to LaTeX (PDF, Beamer), Pandoc will attempt to download
 the referred images. However, recently a lot of sites deny this. It
 seems we need to set an user-agent.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%" />
 
 Quelle: [Turing Test version
 3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
@@ -740,7 +732,7 @@ mit caption:
 |          123 | 123         | 123     |    123    |
 |          bar | bar         | bar     |    bar    |
 
-Tabelle als Markdown-Pipe-Table, vgl. ([Abelson u. a. 1996](#ref-SICP))
+Tabelle als Markdown-Pipe-Table, vgl. (Abelson u. a. 1996)
 
 ------------------------------------------------------------------------
 
@@ -754,71 +746,72 @@ ohne caption:
 
 ## Zitieren, Quellen
 
-Normales Zitieren ([Siek 2023](#ref-Siek2023racket)) …
+Normales Zitieren ([Siek 2023](#ref-Siek2023racket)) ...
 
 Mit Seitenangabe ([Siek 2023, 111](#ref-Siek2023racket)) oder Kapitel
-([Siek 2023, Kap. 111](#ref-Siek2023racket)) …
+([Siek 2023, Kap. 111](#ref-Siek2023racket)) ...
 
-Als Author-Zitat Siek ([2023](#ref-Siek2023racket)) …
+Als Author-Zitat Siek ([2023](#ref-Siek2023racket)) ...
 
 ## GFM
 
 ### Darkmode vs. Lightmode
 
 Diese Abbildung liegt in drei Varianten im Repo vor: transparenter
-Hintergrund, light, dark. Die Einbindung ist auf “transparent”. Scale
+Hintergrund, light, dark. Die Einbindung ist auf "transparent". Scale
 ist auf 60%. Die Abbildung sollte sich automatisch umstellen.
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/dimensionen-ki_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/dimensionen-ki_dark.png"><img src="img/dimensionen-ki.png" width="60%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="60%" /></picture>
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/dimensionen-ki_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/dimensionen-ki_dark.png"><img src="img/dimensionen-ki.png" width="40%"></picture></p><p align="center">Hier
-könnte ihre Werbung stehen. (40%)</p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="40%" /></picture></p><p align="center">Hier könnte ihre Werbung stehen. (40%)</p>
 
-Nachfolgend die “light”-Variante direkt (60%):
+Nachfolgend die "light"-Variante direkt (60%):
 
-<img src="img/dimensionen-ki_light.png" width="60%">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_light.png" width="60%" />
 
-Nachfolgend die “dark”-Variante direkt (60%):
+Nachfolgend die "dark"-Variante direkt (60%):
 
-<img src="img/dimensionen-ki_dark.png" width="60%">
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_dark.png" width="60%" />
 
 Nachfolgend eine Abbildung, die es nicht in light/dark im Repo gibt. Wie
 verhält sich die Preview, so lange nicht beim Übersetzen die light- und
 dark-Varianten mit generiert werden? (40%)
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/test_transparentbackground_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/test_transparentbackground_dark.png"><img src="img/test_transparentbackground.png" width="40%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/test_transparentbackground.png" width="40%" />
 
 Und noch einmal, diesmal mit Caption.
 
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/test_transparentbackground_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/test_transparentbackground_dark.png"><img src="img/test_transparentbackground.png" width="40%"></picture></p><p align="center">Hier
-könnte ihre Werbung stehen.</p>
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/test_transparentbackground.png" width="40%" /></p><p align="center">Hier könnte ihre Werbung stehen.</p>
 
 ### Details
 
 <details>
-
 <summary>
-
 Zusammenfassung: NIX :)
 </summary>
 
-Lalelu …
+Lalelu ...
 
 </details>
 
 ### Alert Extension
 
-GH introduced “alerts” with distinctive styling, like
+GH introduced "alerts" with distinctive styling, like
 
-> \[!NOTE\] NOTE: Foo bar, wuppie fluppie!
+> [!NOTE]
+> NOTE: Foo bar, wuppie fluppie!
 
-> \[!TIP\] TIP: Foo bar, wuppie fluppie!
+> [!TIP]
+> TIP: Foo bar, wuppie fluppie!
 
-> \[!IMPORTANT\] IMPORTANT: Foo bar, wuppie fluppie!
+> [!IMPORTANT]
+> IMPORTANT: Foo bar, wuppie fluppie!
 
-> \[!WARNING\] WARNING: Foo bar, wuppie fluppie!
+> [!WARNING]
+> WARNING: Foo bar, wuppie fluppie!
 
-> \[!CAUTION\] CAUTION: Foo bar, wuppie fluppie!
+> [!CAUTION]
+> CAUTION: Foo bar, wuppie fluppie!
 
 (see
 https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/)
@@ -836,62 +829,72 @@ if the extension `lists_without_preceding_blankline` is activated (see
 https://github.com/jgm/pandoc/issues/11534), so this will fail until
 this issue is fixed:
 
-> [!NOTE]
->
-> <div class="title">
->
-> Note
->
-> </div>
->
-> NOTE: Foo bar, wuppie fluppie!
+<div class="note">
 
-> [!TIP]
->
-> <div class="title">
->
-> Tip
->
-> </div>
->
-> TIP: Foo bar, wuppie fluppie!
+<div class="title">
 
-> [!IMPORTANT]
->
-> <div class="title">
->
-> Important
->
-> </div>
->
-> IMPORTANT: Foo bar, wuppie fluppie!
+Note
 
-> [!WARNING]
->
-> <div class="title">
->
-> Warning
->
-> </div>
->
-> WARNING: Foo bar, wuppie fluppie!
+</div>
 
-> [!CAUTION]
->
-> <div class="title">
->
-> Caution
->
-> </div>
->
-> CAUTION: Foo bar, wuppie fluppie!
+NOTE: Foo bar, wuppie fluppie!
+
+</div>
+
+<div class="tip">
+
+<div class="title">
+
+Tip
+
+</div>
+
+TIP: Foo bar, wuppie fluppie!
+
+</div>
+
+<div class="important">
+
+<div class="title">
+
+Important
+
+</div>
+
+IMPORTANT: Foo bar, wuppie fluppie!
+
+</div>
+
+<div class="warning">
+
+<div class="title">
+
+Warning
+
+</div>
+
+WARNING: Foo bar, wuppie fluppie!
+
+</div>
+
+<div class="caution">
+
+<div class="title">
+
+Caution
+
+</div>
+
+CAUTION: Foo bar, wuppie fluppie!
+
+</div>
 
 ------------------------------------------------------------------------
 
-Let’s stick with Pandocs divs in Markdown content and use filters for
+Let's stick with Pandocs divs in Markdown content and use filters for
 export. This should work regardless the bugs relating to GH alterts in
 both the reader (https://github.com/jgm/pandoc/issues/11534) and the
-writer (https://github.com/jgm/pandoc/issues/11533), also when using “-f
+writer (https://github.com/jgm/pandoc/issues/11533), also when using "-f
 markdown+lists_without_preceding_blankline\`:
 
 > [!NOTE]
@@ -922,100 +925,88 @@ lua-filter**)
 (**usage in custom divs**)
 
 This should work regardless the bugs relating to GH alterts in both the
-reader and the writer, also when using “-f
+reader and the writer, also when using "-f
 markdown+lists_without_preceding_blankline\`:
 
 > [!IMPORTANT]
 >
 > <details open>
->
 > <summary><strong>🎯 TL;DR</strong></summary>
->
 > foobar test
 > </details>
 
-> [!TIP]
+> [!IMPORTANT]
 >
-> <details>
->
+> <details open>
 > <summary><strong>🏅 Challenges</strong></summary>
->
-> prove that $`E = m c^2`$.
+> prove that $E = m c^2$.
 > </details>
 
 ------------------------------------------------------------------------
 
-- Export to GH Markdown using [“distinctive
-  alerts”](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
-- Export to Hugo using [notice
-  shortcode](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/notice/index.html)
-- Export to Beamer using
-  [beamercolorbox](https://tex.stackexchange.com/questions/411069/creating-beamer-box-environment)
-  (also
-  [beameruserguide.pdf](https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf);
-  or `block`, `alertblock`, `examples` -
-  cf. https://www.overleaf.com/learn/latex/Beamer%23Creating_a_table_of_contents)
+-   Export to GH Markdown using ["distinctive
+    alerts"](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
+-   Export to Hugo using [notice
+    shortcode](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/notice/index.html)
+-   Export to Beamer using
+    [beamercolorbox](https://tex.stackexchange.com/questions/411069/creating-beamer-box-environment)
+    (also
+    [beameruserguide.pdf](https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf);
+    or `block`, `alertblock`, `examples` -
+    cf. https://www.overleaf.com/learn/latex/Beamer%23Creating_a_table_of_contents)
 
-This should probably be in line with \#180 …
+This should probably be in line with #180 ...
 
 ### GH Shenanigans
 
-The GitHub Markdown parser has a really weird bug: as soon as there’s
-inline math in a bullet point, any display math after that won’t render
+The GitHub Markdown parser has a really weird bug: as soon as there's
+inline math in a bullet point, any display math after that won't render
 properly in the whole bullet list.
 
 #### Example
 
-- Bullet point 1
+-   Bullet point 1
 
-- Bullet point 2 with block math (w/o blank line)
+-   Bullet point 2 with block math (w/o blank line)
+    $$h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-``` math
-h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
+-   Bullet point 3 with block math and blank line
 
-- Bullet point 3 with block math and blank line
+    $$\mathcal{L} = (\hat{y} - y)^2 = (h(\mathbf{x}) - y)^2$$
 
-``` math
-\mathcal{L} = (\hat{y} - y)^2 = (h(\mathbf{x}) - y)^2
-```
+-   Bullet point 4 with inline math ($x_i$) and block math and blank
+    line
 
-- Bullet point 4 with inline math ($`x_i`$) and block math and blank
-  line
+    $$\mathcal{L} = (\hat{y} - y)^2 = (h(\mathbf{x}) - y)^2$$
 
-``` math
-\mathcal{L} = (\hat{y} - y)^2 = (h(\mathbf{x}) - y)^2
-```
+-   Bullet point 5 with image
 
-- Bullet point 5 with image
+    <img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
 
-  <picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture>
+-   Bullet point 6 with figure
 
-- Bullet point 6 with figure
+    <p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p><p align="center">image caption</p>
 
-  <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png"></picture></p><p align="center">image
-  caption</p>
+-   Bullet point 7 with code block
 
-- Bullet point 7 with code block
+    ``` antlr
+    grammar Hello;
 
-  ``` antlr
-  grammar Hello;
+    start : stmt* ;
 
-  start : stmt* ;
+    stmt  : ID '=' expr ';' | expr ';' ;
+    expr  : term ('+' term)* ;
+    term  : atom ('*' atom)* ;
+    atom  : ID | NUM ;
 
-  stmt  : ID '=' expr ';' | expr ';' ;
-  expr  : term ('+' term)* ;
-  term  : atom ('*' atom)* ;
-  atom  : ID | NUM ;
+    ID    : [a-z][a-zA-Z]* ;
+    NUM   : [0-9]+ ;
+    WS    : [ \t\n]+ -> skip ;
+    ```
 
-  ID    : [a-z][a-zA-Z]* ;
-  NUM   : [0-9]+ ;
-  WS    : [ \t\n]+ -> skip ;
-  ```
+    foo bar wuppie fluppie - text below code block in bullet point 6
 
-  foo bar wuppie fluppie - text below code block in bullet point 6
-
-- simple bullet point
+-   simple bullet point
 
 #### Tests
 
@@ -1106,98 +1097,73 @@ compare with
 
 **will be rendered as**
 
-- wuppie $`x_i`$ fluppie:
-
-``` math
-h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
-
-- foo bar
+-   wuppie $x_i$ fluppie:
+    $$h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
+-   foo bar
 
 compare with
 
-- wuppie fluppie:
-
-``` math
-h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
-
-- foo bar
+-   wuppie fluppie:
+    $$h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
+-   foo bar
 
 compare with
 
-- wuppie $`x_i`$ fluppie:
+-   wuppie $x_i$ fluppie:
 
-``` math
-h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
+$$h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-- foo bar
+-   foo bar
 
 compare with
 
-- wuppie $`x_i`$ fluppie:
-  $`h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n`$
-- foo bar
+-   wuppie $x_i$ fluppie:
+    $h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$
+-   foo bar
 
 compare with
 
-- wuppie $`x_i`$ fluppie $`w_0`$:
-  - bla bla bla
+-   wuppie $x_i$ fluppie $w_0$:
+    -   bla bla bla
 
-  - blub $`x`$ blub blub
+    -   blub $x$ blub blub
 
-  <!-- -->
+        $$h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-  - brabbel brabbel brabbel
+    -   brabbel brabbel brabbel
 
-  - blafasel $`y`$
+    -   blafasel $y$
 
-    blubfasel $`z`$
+        $$h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-``` math
-h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
-
-``` math
-h(\mathbf{x}) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
-
-- foobar
+        blubfasel $z$
+-   foobar
 
 compare with
 
-1.  wuppie $`x_i`$ fluppie $`w_0`$:
+1.  wuppie $x_i$ fluppie $w_0$:
 
-    - bla bla bla
+    $$h(\mathbf{x}^1) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-    - blub $`x`$ blub blub
+    -   bla bla bla
 
-    <!-- -->
+    -   blub $x$ blub blub
 
-    - brabbel brabbel brabbel
+        $$h(\mathbf{x}^2) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-    - blafasel $`y`$
+    -   brabbel brabbel brabbel
 
-      blubfasel $`z`$
+    -   blafasel $y$
 
-``` math
-h(\mathbf{x}^1) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
+        $$h(\mathbf{x}^3) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n$$
 
-``` math
-h(\mathbf{x}^2) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
+        blubfasel $z$
 
-``` math
-h(\mathbf{x}^3) = \mathbf{w}^T\mathbf{x} = w_0 + w_1x_1 + w_2x_2 + \ldots + w_nx_n
-```
-
-1.  foobar
+2.  foobar
 
 #### Test Case nn02-linear-regression.md
 
-[nn02-linear-regression.md](nn02-linear-regression.md)
+[nn02-linear-regression.md](./nn02-linear-regression.md)
 
 ## Filter for Slides and Handouts
 
@@ -1212,18 +1178,18 @@ Sometimes[^1] we need some[^2] footnotes.
 ~~Docsify seems to recognize footnotes even in inline code:~~
 
 | **Zeichenkette** | **Beschreibt**                                           |
-|:-----------------|:---------------------------------------------------------|
+|:-----------------|:-----------------------------------------------------|
 | `^`              | Zeilenanfang                                             |
-| `[abc]`          | “a” oder “b” oder “c”                                    |
-| `[^abc]`         | alles außer “a”, “b” oder “c” (Negation)                 |
+| `[abc]`          | "a" oder "b" oder "c"                                    |
+| `[^abc]`         | alles außer "a", "b" oder "c" (Negation)                 |
 | `^abc`           | test                                                     |
 | `[ ^abc]`        | test                                                     |
 | `[ ^abc]`        | test                                                     |
 | `[^ abc]`        | test                                                     |
-| `[a-zA-Z]`       | alle Zeichen von “a” bis “z” und “A” bis “Z” (Range)     |
-| `[a-z&&[def]]`   | “d”,“e” oder “f” (Schnitt)                               |
-| `[a-z&&[^bc]]`   | “a” bis “z”, außer “b” und “c”: `[ad-z]` (Subtraktion)   |
-| `[a-z&&[^m-p]]`  | “a” bis “z”, außer “m” bis “p”: `[a-lq-z]` (Subtraktion) |
+| `[a-zA-Z]`       | alle Zeichen von "a" bis "z" und "A" bis "Z" (Range)     |
+| `[a-z&&[def]]`   | "d","e" oder "f" (Schnitt)                               |
+| `[a-z&&[^bc]]`   | "a" bis "z", außer "b" und "c": `[ad-z]` (Subtraktion)   |
+| `[a-z&&[^m-p]]`  | "a" bis "z", außer "m" bis "p": `[a-lq-z]` (Subtraktion) |
 
 ``` java
 ^               // Zeilenanfang
@@ -1241,14 +1207,16 @@ Sometimes[^1] we need some[^2] footnotes.
 
 ## Handling of TeX Shenanigans
 
-**Zustand:**  
-(Formale) Beschreibung eines Zustandes der Welt
+**Zustand:**
 
-**Aktion:**  
-(Formale) Beschreibung einer durch Agenten ausführbaren Aktion
+:   (Formale) Beschreibung eines Zustandes der Welt
 
-- Anwendbar auf bestimmte Zustände
-- Überführt Welt in neuen Zustand (“Nachfolge-Zustand”)
+**Aktion:**
+
+:   (Formale) Beschreibung einer durch Agenten ausführbaren Aktion
+
+    -   Anwendbar auf bestimmte Zustände
+    -   Überführt Welt in neuen Zustand ("Nachfolge-Zustand")
 
 LaTeX-Befehle wie `\bigskip` etc. sollten automatisch entfernt werden:
 
@@ -1273,7 +1241,7 @@ cf. https://www.overleaf.com/learn/latex/Beamer%23Creating_a_table_of_contents
 pandoc replacement:
 cf. https://www.overleaf.com/learn/latex/Beamer%23Creating_a_table_of_contents
 
-Also … hmmm. And “wuppie”?
+Also ... hmmm. And "wuppie"?
 
 ## Columns
 
@@ -1290,17 +1258,17 @@ expr : e1=expr '*' e2=expr      # MUL
      ;
 ```
 
-Beim Parsen von “5\*4+3” würde dabei der folgende Parsetree entstehen:
+Beim Parsen von "5\*4+3" würde dabei der folgende Parsetree entstehen:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="img/b_light.png"><source media="(prefers-color-scheme: dark)" srcset="img/b_dark.png"><img src="img/b.png" width="20%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="20%" />
 
-wuppie! fluppie! foo? bar …
+wuppie! fluppie! foo? bar ...
 
 ## Credits
 
 Typische Regeln und Konventionen tauchen überall auf, beispielsweise bei
-Tim Pope (siehe nächstes Beispiel) oder bei [“How to Write a Git Commit
-Message”](https://cbea.ms/git-commit/).
+Tim Pope (siehe nächstes Beispiel) oder bei ["How to Write a Git Commit
+Message"](https://cbea.ms/git-commit/).
 
 ``` markdown
 Short (50 chars or less) summary of changes
@@ -1320,8 +1288,8 @@ Further paragraphs come after blank lines.
    vary here
 ```
 
-Quelle: [“A Note About Git Commit
-Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+Quelle: ["A Note About Git Commit
+Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 by [Tim Pope](https://tpo.pe/) on tbaggery.com
 
 ------------------------------------------------------------------------
@@ -1332,7 +1300,7 @@ exceptions to our licence (just giving credits):
 
 Quelle: Test 1: Eigenes Material basierend auf einer Idee nach XYZ.
 
-Note: Using the attribute “nolist” with any value would prevent this
+Note: Using the attribute "nolist" with any value would prevent this
 span from being included in the exceptions list since values will be
 read as string in the filter. So even `[bla]{.credits nolist=false}`
 will work:
@@ -1346,7 +1314,7 @@ Quelle: Test 4: Eigenes Material basierend auf einer Idee nach XYZ.
 Quelle: Test 5: Eigenes Material basierend auf einer Idee nach XYZ.
 
 Do not use the old `origin` span anymore - superceded by `credits`.
-<span class="origin">This should emit a warning…</span>
+<span class="origin">This should emit a warning...</span>
 
 ## Filters
 
@@ -1356,7 +1324,7 @@ Hier ein ShowMe-Test:
 
 <div class="showme">
 
-this is hidden content …
+this is hidden content ...
 
 </div>
 
@@ -1365,14 +1333,10 @@ this is hidden content …
 Use `details` instead:
 
 <details>
-
-this is hidden content …
+this is hidden content ...
 </details>
-
 <details>
-
 <summary><strong>wuppie</strong></summary>
-
 this is a show-me w/ title :)
 </details>
 
@@ -1382,7 +1346,7 @@ this is a show-me w/ title :)
 
 <div class="cbox">
 
-this is content to be centered (and put into a box)…
+this is content to be centered (and put into a box)...
 
 </div>
 
@@ -1401,7 +1365,7 @@ this content should be centered
 This <span class="alert">will</span> be highlighted. (but not used
 anymore)
 
-Use [Pandoc’s mark
+Use [Pandoc's mark
 extension](https://pandoc.org/MANUAL.html#extension-mark) instead: This
 <span class="mark">will</span> be highlighted. Even
 <span class="mark">**with bold**</span> text.
@@ -1414,7 +1378,7 @@ extension](https://pandoc.org/MANUAL.html#extension-mark) instead: This
 
 ### Thema
 
-<span class="thema">The topic of this task or …</span> (but not used
+<span class="thema">The topic of this task or ...</span> (but not used
 anymore)
 
 ### BSP
@@ -1433,56 +1397,58 @@ use `ex` instead:
 
 ------------------------------------------------------------------------
 
-Vor `\pause`…
+Vor `\pause`...
 
-Nach `\pause`… (“neue” Slide)
+Nach `\pause`... ("neue" Slide)
 
 ## Last Change
 
 should be added automatically and in `\scriptsize` or `<sup><sub>`
 
-## 📖 Zum Nachlesen
-
-- Tate ([2010, Kap. 2](#ref-Tate2011)): foo bar wuppie fluppie
-- Tate ([2010, Kap. 2](#ref-Tate2011)): Creating Graphical User
-  Interfaces \> Creating a GUI With Swing
-- Nystrom ([2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
-- ([Nystrom 2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
+> [!TIP]
+>
+> <details open>
+> <summary><strong>📖 Zum Nachlesen</strong></summary>
+>
+> -   Tate ([2010, Kap. 2](#ref-Tate2011)): foo bar wuppie fluppie
+> -   Tate ([2010, Kap. 2](#ref-Tate2011)): Creating Graphical User
+>     Interfaces \> Creating a GUI With Swing
+> -   Nystrom ([2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
+> -   ([Nystrom 2021](#ref-Nystrom2021)): Abschnitt 2.5.2: Ant
+>
+> </details>
 
 > [!NOTE]
 >
-> <details>
->
+> <details >
 > <summary><strong>✅ Lernziele</strong></summary>
 >
-> - k1: K1
-> - k2: K2
-> - k3: K3.1
-> - k3: K3.2
+> -   k1: K1
+> -   k2: K2
+> -   k3: K3.1
+> -   k3: K3.2
 >
 > </details>
 
 > [!TIP]
 >
-> <details>
->
+> <details >
 > <summary><strong>🧩 Quizzes</strong></summary>
 >
-> - [Quiz Git Basics
->   (ILIAS)](https://www.hsbi.de/elearning/goto.php?target=tst_1106241&client_id=FH-Bielefeld)
+> -   [Quiz Git Basics
+>     (ILIAS)](https://www.hsbi.de/elearning/goto.php?target=tst_1106241&client_id=FH-Bielefeld)
 >
 > </details>
 
-> [!TIP]
+> [!IMPORTANT]
 >
-> <details>
->
+> <details open>
 > <summary><strong>🏅 Challenges</strong></summary>
 >
 > **Lexer und Parser mit ANTLR: Programmiersprache Lox**
 >
 > Betrachten Sie folgenden Code-Schnipsel in der Sprache
-> [“Lox”](https://www.craftinginterpreters.com/the-lox-language.html):
+> ["Lox"](https://www.craftinginterpreters.com/the-lox-language.html):
 >
 >     fun fib(x) {
 >         if (x == 0) {
@@ -1517,8 +1483,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 
 > [!NOTE]
 >
-> <details>
->
+> <details >
 > <summary><strong>👀 Quellen</strong></summary>
 >
 > <div id="refs" class="references csl-bib-body hanging-indent">
@@ -1568,25 +1533,25 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
-- “FooFOOOO” by me on void.intern.com
-- [Turing Test version
-  3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
-  by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on Wikimedia
-  Commons ([Public
-  Domain](https://en.wikipedia.org/wiki/en:public_domain))
-- [“A Note About Git Commit
-  Messages”](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  by [Tim Pope](https://tpo.pe/) on tbaggery.com
-- “Foo” by me on void.extern.com
-- test from yaml (challenges) - should not appear in slides
+-   "FooFOOOO" by me on void.intern.com
+-   ["A Note About Git Commit
+    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+    by [Tim Pope](https://tpo.pe/) on tbaggery.com
+-   [Turing Test version
+    3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
+    by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
+    Wikimedia Commons ([Public
+    Domain](https://en.wikipedia.org/wiki/en:public_domain))
+-   "Foo" by me on void.extern.com
+-   test from yaml (challenges) - should not appear in slides
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> e432370 (gh-alerts: add name to alert text, 2026-03-18)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 2c200cb Fri Mar 20 14:38:46 2026 +0100 test: add some tests for handling relative links for docsify<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 

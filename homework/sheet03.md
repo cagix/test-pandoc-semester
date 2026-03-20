@@ -284,11 +284,11 @@ spielt hier keine Rolle, es wird einfach direkt nach jedem Statement
 umgebrochen (bzw. wie bei den Kontrollstrukturen gezeigt).
 
 **Hinweis**: Das Thema Pretty Printing ist interessant und kann recht
-schnell ziemlich aufwändig werden. Sie finden im Paper [“A prettier
-printer”](https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf)
+schnell ziemlich aufwändig werden. Sie finden im Paper ["A prettier
+printer"](https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf)
 von Philip Wadler ([Wadler 2003](#ref-wadler2003prettier)) und im Blog
-[“The Hardest Program I’ve Ever
-Written”](https://journal.stuffwithstuff.com/2015/09/08/the-hardest-program-ive-ever-written/)
+["The Hardest Program I've Ever
+Written"](https://journal.stuffwithstuff.com/2015/09/08/the-hardest-program-ive-ever-written/)
 von Bob Nystrom ([Nystrom 2015](#ref-Nystrom2015)) gut geschriebene
 Beiträge, um tiefer in die Materie einzusteigen.
 
@@ -313,23 +313,22 @@ implementieren.)
 
 > [!NOTE]
 >
-> <details>
->
+> <details >
 > <summary><strong>👀 Quellen</strong></summary>
 >
 > <div id="refs" class="references csl-bib-body hanging-indent">
 >
 > <div id="ref-Nystrom2015" class="csl-entry">
 >
-> Nystrom, R. 2015. „The Hardest Program I’ve Ever Written“.
+> Nystrom, R. 2015. „The Hardest Program I've Ever Written".
 > <https://journal.stuffwithstuff.com/2015/09/08/the-hardest-program-ive-ever-written/>.
 >
 > </div>
 >
 > <div id="ref-wadler2003prettier" class="csl-entry">
 >
-> Wadler, P. 2003. „A Prettier Printer“. *The Fun of Programming,
-> Cornerstones of Computing*, 223–43.
+> Wadler, P. 2003. „A Prettier Printer". *The Fun of Programming,
+> Cornerstones of Computing*, 223--43.
 > <https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf>.
 >
 > </div>
@@ -340,12 +339,12 @@ implementieren.)
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 (tests: add some no-beamer metadata, 2026-03-10)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 Tue Mar 10 15:55:30 2026 +0100 tests: add some no-beamer metadata<br></sub></sup></p></blockquote>
 
-[^1]: Um den Text lesbar zu halten, wird hier oft nur von “Parser”
+[^1]: Um den Text lesbar zu halten, wird hier oft nur von "Parser"
     gesprochen - gemeint ist aber die gesamte auf diesem Blatt zu
     erstellende Toolchain: Lexer - Parser - AST - Ausgabe.

@@ -3,7 +3,6 @@
 > [!IMPORTANT]
 >
 > <details open>
->
 > <summary><strong>🎯 TL;DR</strong></summary>
 >
 > Mit ANTLR kann aus einer Grammatik ein LL(\*)-Parser generiert werden.
@@ -59,13 +58,12 @@
 > [!TIP]
 >
 > <details open>
->
 > <summary><strong>🎦 Videos</strong></summary>
 >
-> - [VL Parser mit ANTLR (YT)](https://youtu.be/YuUHBvPUS4k)
-> - [Demo ANTLR Parser (YT)](https://youtu.be/FJOEPY-TMmw)
-> - [VL Parser mit ANTLR
->   (HSBI)](https://www.hsbi.de/medienportal/m/19925b756d6fc934bfe0b5107eb5fa58373a53af49c690ebce86e15f2b212c89c80ea7665e42c78abdc8dfe0718ea46f6a9817eeba4ad1293bdb4c84f7c8f084)
+> -   [VL Parser mit ANTLR (YT)](https://youtu.be/YuUHBvPUS4k)
+> -   [Demo ANTLR Parser (YT)](https://youtu.be/FJOEPY-TMmw)
+> -   [VL Parser mit ANTLR
+>     (HSBI)](https://www.hsbi.de/medienportal/m/19925b756d6fc934bfe0b5107eb5fa58373a53af49c690ebce86e15f2b212c89c80ea7665e42c78abdc8dfe0718ea46f6a9817eeba4ad1293bdb4c84f7c8f084)
 >
 > </details>
 
@@ -95,35 +93,35 @@ WS    : [ \t\n]+ -> skip ;
 1.  Grammatik übersetzen und Code generieren: `antlr Hello.g4`
 2.  Java-Code kompilieren: `javac *.java`
 3.  Parser ausführen:
-    - `grun Hello start -tree` oder `grun Hello start -gui` (Grammatik
-      “Hello”, Startregel “start”)
+    -   `grun Hello start -tree` oder `grun Hello start -gui` (Grammatik
+        "Hello", Startregel "start")
 
-    - Alternativ mit kleinem Java-Programm:
+    -   Alternativ mit kleinem Java-Programm:
 
-      ``` java
-      import org.antlr.v4.runtime.CharStreams;
-      import org.antlr.v4.runtime.CommonTokenStream;
-      import org.antlr.v4.runtime.tree.ParseTree;
+        ``` java
+        import org.antlr.v4.runtime.CharStreams;
+        import org.antlr.v4.runtime.CommonTokenStream;
+        import org.antlr.v4.runtime.tree.ParseTree;
 
-      public class Main {
-          public static void main(String[] args) throws Exception {
-              HelloLexer lexer = new HelloLexer(CharStreams.fromStream(System.in));
-              CommonTokenStream tokens = new CommonTokenStream(lexer);
-              HelloParser parser = new HelloParser(tokens);
+        public class Main {
+            public static void main(String[] args) throws Exception {
+                HelloLexer lexer = new HelloLexer(CharStreams.fromStream(System.in));
+                CommonTokenStream tokens = new CommonTokenStream(lexer);
+                HelloParser parser = new HelloParser(tokens);
 
-              ParseTree tree = parser.start();  // Start-Regel
-              System.out.println(tree.toStringTree(parser));
-          }
-      }
-      ```
+                ParseTree tree = parser.start();  // Start-Regel
+                System.out.println(tree.toStringTree(parser));
+            }
+        }
+        ```
 
 ### Startregeln
 
-- `start` ist eine <span class="mark">Parser-Regel</span> =\> Eine
-  Parser-Regel pro Grammatik wird benötigt, damit man den generierten
-  Parser am Ende auch starten kann …
-- Alle Regeln mit kleinem Anfangsbuchstaben sind Parser-Regeln
-- Alle Regeln mit großem Anfangsbuchstaben sind Lexer-Regeln
+-   `start` ist eine <span class="mark">Parser-Regel</span> =\> Eine
+    Parser-Regel pro Grammatik wird benötigt, damit man den generierten
+    Parser am Ende auch starten kann ...
+-   Alle Regeln mit kleinem Anfangsbuchstaben sind Parser-Regeln
+-   Alle Regeln mit großem Anfangsbuchstaben sind Lexer-Regeln
 
 ### Formen der Subregeln
 
@@ -172,17 +170,17 @@ stmt  : expr | ID  ;
 expr  : ID   | NUM ;
 ```
 
-Bei der Eingabe “foo” würde die Alternative `ID` in der Regel `expr`
-“gewinnen”, weil sie in der Grammatik vor der Alternative `ID` in der
+Bei der Eingabe "foo" würde die Alternative `ID` in der Regel `expr`
+"gewinnen", weil sie in der Grammatik vor der Alternative `ID` in der
 Regel `stmt` kommt und damit Vorrang hat.
 
 ### Parse-Tree
 
 Betrachten wir erneut die obige Grammatik.
 
-Die Eingabe von “`a = 42;`” führt zu folgendem Parse-Tree:
+Die Eingabe von "`a = 42;`" führt zu folgendem Parse-Tree:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="images/hello_ex1_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/hello_ex1_dark.png"><img src="images/hello_ex1.png" width="60%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex1.png" width="60%" />
 
 Diese Eingabe führt zur Erkennung der Token `[ID, WS, =, WS, NUM, ;]`,
 wobei die `WS`-Token verworfen werden und der Parser den Tokenstream
@@ -192,10 +190,10 @@ Die Startregel hat auf der rechten Seite kein oder mehrere
 `stmt`-Regeln. Die `stmt`-Regel fordert auf der rechten Seite entweder
 die Token `ID`und `=` sowie die Regel `expr` gefolgt vom Token `;`, oder
 die Regel `expr` gefolgt vom Token `;`. In unserem Beispiel kann für das
-“a” das Token `ID` produziert werden, das “=” matcht ebenfalls. Die “42”
+"a" das Token `ID` produziert werden, das "=" matcht ebenfalls. Die "42"
 wird erklärt, indem für `expr` ein `term` und dort ein `atom` aufgerufen
 wird. Für das `atom` muss entweder ein Token `ID` oder `NUM` als
-nächstes Token kommen - hier wird die “42” wird als Token `NUM`
+nächstes Token kommen - hier wird die "42" wird als Token `NUM`
 verarbeitet. Da die weiteren Regelteile in `term` und `expr` optional
 sind, haben wir damit ein `expr` erfüllt und das nachfolgende `;`-Token
 schließt die erste Alternative der Regel `stmt` erfolgreich ab.
@@ -215,15 +213,15 @@ zu `stmt - 42` vereinfachen.
 Betrachten wir nun die Eingabe `foo = 2+3*4; bar = 3*4+2;`. Diese führt
 zu folgendem Parse-Tree:
 
-<picture><source media="(prefers-color-scheme: light)" srcset="images/hello_ex2_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/hello_ex2_dark.png"><img src="images/hello_ex2.png" width="60%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex2.png" width="60%" />
 
 Wie man sehen kann, sind in der Grammatik die üblichen Vorrangregeln für
 die Operationen `+` und `*` berücksichtigt - die Multiplikation wird in
-beiden Fällen korrekt “unter” der Addition im Baum eingehängt.
+beiden Fällen korrekt "unter" der Addition im Baum eingehängt.
 
 ### To EOF not to EOF?
 
-Startregeln müssen nicht unbedingt den gesamten Input “konsumieren”. Sie
+Startregeln müssen nicht unbedingt den gesamten Input "konsumieren". Sie
 müssen per Default nur eine der Alternativen in der Startregel erfüllen.
 
 Betrachten wir noch einmal einen leicht modifizierten Ausschnitt aus der
@@ -236,8 +234,8 @@ start : stmt ;
 Die Startregel wurde so geändert, dass sie nur noch genau ein Statement
 akzeptieren soll.
 
-In diesem Fall würde die Startregel bei der Eingabe “aa; bb;” nur den
-ersten Teil “aa;” konsumieren (als Token `ID`) und das folgende “bb;”
+In diesem Fall würde die Startregel bei der Eingabe "aa; bb;" nur den
+ersten Teil "aa;" konsumieren (als Token `ID`) und das folgende "bb;"
 ignorieren. Das wäre in diesem Fall aber auch kein Fehler.
 
 Wenn der gesamte Eingabestrom durch die Startregel erklärt werden soll,
@@ -248,9 +246,9 @@ eingesetzt werden:
 start : stmt EOF;
 ```
 
-Hier würde die Eingabe “aa; bb;” zu einem Fehler führen, da nur der Teil
-“aa;” durch die Startregel abgedeckt ist (Token `ID`), und der Rest
-“bb;” zwar sogar ein gültiges Token wären (ebenfalls `ID` und `;`), aber
+Hier würde die Eingabe "aa; bb;" zu einem Fehler führen, da nur der Teil
+"aa;" durch die Startregel abgedeckt ist (Token `ID`), und der Rest
+"bb;" zwar sogar ein gültiges Token wären (ebenfalls `ID` und `;`), aber
 eben nicht mehr von der Startregel akzeptiert. Durch das `EOF` soll die
 Startregel aber den gesamten Input konsumieren und erklären, was hier
 nicht geht und entsprechend zum Fehler führt.
@@ -281,11 +279,11 @@ ein Token aus dem Token-Strom zu entnehmen.
 
 ANTLR (ab Version 4) kann mit beiden Aspekten automatisch umgehen:
 
-- ANTLR kann direkte Linksrekursion automatisch auflösen. Die Regel
-  `r : r T U | V ;` kann also in ANTLR verarbeitet werden.
-- ANTLR besitzt einen Mechanismus zur Auflösung von Mehrdeutigkeiten.
-  Wie oben geschrieben, wird bei der Anwendbarkeit von mehreren
-  Alternativen die erste Alternative genutzt.
+-   ANTLR kann direkte Linksrekursion automatisch auflösen. Die Regel
+    `r : r T U | V ;` kann also in ANTLR verarbeitet werden.
+-   ANTLR besitzt einen Mechanismus zur Auflösung von Mehrdeutigkeiten.
+    Wie oben geschrieben, wird bei der Anwendbarkeit von mehreren
+    Alternativen die erste Alternative genutzt.
 
 Damit lässt sich die typische Struktur für Expression-Grammatiken
 deutlich lesbarer gestalten:
@@ -330,7 +328,7 @@ Links-Rekursion kann ANTLR nicht umgehen.
 Wenn mehrere Alternativen einer Regel anwendbar sind, entscheidet sich
 ANTLR für die erste Alternative.
 
-Wenn sich mehrere Tokenregeln überlappen, “gewinnt” auch hier die zuerst
+Wenn sich mehrere Tokenregeln überlappen, "gewinnt" auch hier die zuerst
 definierte Regel.
 
 ``` antlr
@@ -376,7 +374,7 @@ s    : expr         {List<EContext> x = $expr.ctx.e();}
 expr : e '*' e ;
 ```
 
-<picture><source media="(prefers-color-scheme: light)" srcset="images/ParserRuleContext_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/ParserRuleContext_dark.png"><img src="images/ParserRuleContext.png" width="80%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParserRuleContext.png" width="80%" />
 
 Jede Regel liefert ein passend zu dieser Regel generiertes
 Kontext-Objekt zurück. Darüber kann man das/die Kontextobjekt(e) der
@@ -431,7 +429,7 @@ Default-`ParseTreeWalker` wird der Parse-Tree mit Tiefensuche abgelaufen
 und jeweils beim Eintritt in bzw. beim Austritt aus einen/m Knoten der
 passende Listener mit dem passenden Kontext-Objekt aufgerufen.
 
-Damit kann man die Grammatik “für sich” halten, d.h. unabhängig von
+Damit kann man die Grammatik "für sich" halten, d.h. unabhängig von
 einer konkreten Zielsprache und die Aktionen über die Listener (oder
 Visitors, s.u.) ausführen.
 
@@ -447,9 +445,9 @@ ANTLR kann zu dieser Grammatik `calc.g4` einen passenden Listener
 von `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseListener`):
 
-<picture><source media="(prefers-color-scheme: light)" srcset="images/ParseTreeListener_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/ParseTreeListener_dark.png"><img src="images/ParseTreeListener.png" width="80%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeListener.png" width="80%" />
 
-(Nur “interessante” Methoden gezeigt.)
+(Nur "interessante" Methoden gezeigt.)
 
 Von dieser Basisklasse leitet man einen eigenen Listener ab und
 implementiert die Methoden, die man benötigt.
@@ -515,13 +513,13 @@ ANTLR kann zu dieser Grammatik einen passenden Visitor (Interface
 `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseVisitor<T>`):
 
-<picture><source media="(prefers-color-scheme: light)" srcset="images/ParseTreeVisitor_light.png"><source media="(prefers-color-scheme: dark)" srcset="images/ParseTreeVisitor_dark.png"><img src="images/ParseTreeVisitor.png" width="80%"></picture>
+<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeVisitor.png" width="80%" />
 
-(Nur “interessante” Methoden gezeigt.)
+(Nur "interessante" Methoden gezeigt.)
 
 Von dieser Basisklasse leitet man einen eigenen Visitor ab und
 überschreibt die Methoden, die man benötigt. Wichtig ist, dass man
-selbst für das “Besuchen” der Kindknoten sorgen muss (rekursiver Aufruf
+selbst für das "Besuchen" der Kindknoten sorgen muss (rekursiver Aufruf
 der geerbten Methode `visit()`).
 
 ``` java
@@ -588,7 +586,7 @@ Lexers/Parsers!
 
 ## Ausblick
 
-Damit haben wir die sprichwörtliche “Spitze des Eisbergs” gesehen. Mit
+Damit haben wir die sprichwörtliche "Spitze des Eisbergs" gesehen. Mit
 ANTLR sind noch viele weitere Dinge möglich. Bitte nutzen Sie aktiv die
 Dokumentation auf
 [github.com/antlr/antlr4](https://github.com/antlr/antlr4).
@@ -598,46 +596,50 @@ Dokumentation auf
 Parser mit ANTLR generieren: Parser-Regeln werden mit
 **Kleinbuchstaben** geschrieben
 
-- Regeln können Lexer- und Parser-Regeln “aufrufen”
-- Regeln können Alternativen haben
-- Bei Mehrdeutigkeit: Vorrang für erste Alternative
-- ANTLR erlaubt direkte Links-Rekursion
-- ANTLR erzeugt Parse-Tree
-- Benannte Alternativen und Regel-Elemente
-- Traversierung des Parse-Tree: Listener oder Visitoren, Zugriff auf
-  Kontextobjekte
-
-## 📖 Zum Nachlesen
-
-- Parr ([2014](#ref-Parr2014))
-
-> [!NOTE]
->
-> <details>
->
-> <summary><strong>✅ Lernziele</strong></summary>
->
-> - k2: Aufbau der Parser-Regeln
-> - k3: Alternativen und optionale/mehrfache Regelteile in Parser-Regeln
-> - k3: Vorrang von Alternativen (bei Mehrdeutigkeiten)
-> - k3: Benannte Alternativen und Regel-Elemente
-> - k2: Aufbau des Parse-Tree
-> - k3: Umgang mit Kontext-Objekten
-> - k3: Traversierung des Parse-Tree mit den generierten Listenern oder
->   Visitors
->
-> </details>
+-   Regeln können Lexer- und Parser-Regeln "aufrufen"
+-   Regeln können Alternativen haben
+-   Bei Mehrdeutigkeit: Vorrang für erste Alternative
+-   ANTLR erlaubt direkte Links-Rekursion
+-   ANTLR erzeugt Parse-Tree
+-   Benannte Alternativen und Regel-Elemente
+-   Traversierung des Parse-Tree: Listener oder Visitoren, Zugriff auf
+    Kontextobjekte
 
 > [!TIP]
 >
-> <details>
+> <details open>
+> <summary><strong>📖 Zum Nachlesen</strong></summary>
 >
+> -   Parr ([2014](#ref-Parr2014))
+>
+> </details>
+
+> [!NOTE]
+>
+> <details >
+> <summary><strong>✅ Lernziele</strong></summary>
+>
+> -   k2: Aufbau der Parser-Regeln
+> -   k3: Alternativen und optionale/mehrfache Regelteile in
+>     Parser-Regeln
+> -   k3: Vorrang von Alternativen (bei Mehrdeutigkeiten)
+> -   k3: Benannte Alternativen und Regel-Elemente
+> -   k2: Aufbau des Parse-Tree
+> -   k3: Umgang mit Kontext-Objekten
+> -   k3: Traversierung des Parse-Tree mit den generierten Listenern
+>     oder Visitors
+>
+> </details>
+
+> [!IMPORTANT]
+>
+> <details open>
 > <summary><strong>🏅 Challenges</strong></summary>
 >
 > **Lexer und Parser mit ANTLR: Programmiersprache Lox**
 >
 > Betrachten Sie folgenden Code-Schnipsel in der Sprache
-> [“Lox”](https://www.craftinginterpreters.com/the-lox-language.html):
+> ["Lox"](https://www.craftinginterpreters.com/the-lox-language.html):
 >
 >     fun fib(x) {
 >         if (x == 0) {
@@ -665,8 +667,7 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 > [!NOTE]
 >
-> <details>
->
+> <details >
 > <summary><strong>👀 Quellen</strong></summary>
 >
 > <div id="refs" class="references csl-bib-body hanging-indent">
@@ -685,8 +686,8 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 (reformat using shorter lines, 2025-08-09)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 Sat Aug 9 09:40:07 2025 +0200 reformat using shorter lines<br></sub></sup></p></blockquote>

@@ -254,7 +254,7 @@ if (a > 0) {
 Eine Funktionsdefinition macht dem Compiler die Implementierung einer
 Funktion bekannt.
 
-Sie gibt zunächst die Signatur der Funktion (den “Funktionskopf”)
+Sie gibt zunächst die Signatur der Funktion (den "Funktionskopf")
 bekannt: Rückgabetyp, Funktionsname, Parameterliste.
 
 Die Parameterliste ist eine Komma-separierte Liste mit der Deklaration
@@ -390,15 +390,15 @@ sichtbar sind. Geben Sie erkannte Fehler auf der Konsole aus.
 
 Implementieren Sie einen dritten Lauf. Führen Sie die Typprüfung durch:
 Haben die Operanden in Ausdrücken die richtigen Typen, passen die Typen
-der Funktionsargumente, passen die Typen bei einer Zuweisung, … Geben
+der Funktionsargumente, passen die Typen bei einer Zuweisung, ... Geben
 Sie erkannte Fehler auf der Konsole aus. *Hinweis*: Sie brauchen hier
 nur die Typprüfung durchführen. Eine Typinferenz oder Typerweiterung
 o.ä. ist nicht notwendig.
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 (tests: add some no-beamer metadata, 2026-03-10)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 Tue Mar 10 15:55:30 2026 +0100 tests: add some no-beamer metadata<br></sub></sup></p></blockquote>

@@ -4,23 +4,25 @@
 
 Welche Sprache wird von dem folgenden regulären Ausdruck beschrieben?
 
-$`a\ +\ a\ (a\ +\ b)^*\ a`$
+$a\ +\ a\ (a\ +\ b)^*\ a$
 
 ## Bezeichner in Programmiersprachen (3P)
 
 Betrachten Sie eine Programmiersprache, in der die Bezeichner (= Namen
-für Variablen, Funktionen, Klassen, Methoden, …) folgenden Aufbau haben:
+für Variablen, Funktionen, Klassen, Methoden, ...) folgenden Aufbau
+haben:
 
-- Alle Variablennamen beginnen mit **V** oder **v**
-- Handelt es sich um globale Variablen, beginnen Sie mit **V**, lokale
-  beginnen mit **v**
-- Funktions- und Methodenparameter beginnen mit **p**, KLassenparameter
-  (bei der Definition von Vererbung) beginnen mit **P**
-- Weitere Bezeichner müssen mit einem Buchstaben (a-z, A-Z) beginnen
-- Die folgenden Zeichen dürfen Buchstaben, Ziffern und ein Untersreich
-  sein
-- Bezeichner dürfen nicht mit einem Unterstrich enden
-- Alle Bezeichner müssen aus mindestens zwei Zeichen bestehen
+-   Alle Variablennamen beginnen mit **V** oder **v**
+-   Handelt es sich um globale Variablen, beginnen Sie mit **V**, lokale
+    beginnen mit **v**
+-   Funktions- und Methodenparameter beginnen mit **p**,
+    KLassenparameter (bei der Definition von Vererbung) beginnen mit
+    **P**
+-   Weitere Bezeichner müssen mit einem Buchstaben (a-z, A-Z) beginnen
+-   Die folgenden Zeichen dürfen Buchstaben, Ziffern und ein Untersreich
+    sein
+-   Bezeichner dürfen nicht mit einem Unterstrich enden
+-   Alle Bezeichner müssen aus mindestens zwei Zeichen bestehen
 
 Entwickeln Sie einen regulären Ausdruck, der den Aufbau der Bezeichner
 beschreibt. Beachten Sie, dass Ihr regex alle zulässigen Bezeichner
@@ -56,13 +58,13 @@ Sie Ihre Lösungen wie in Aufgabe
 Warum ist der folgende regex ungeeignet für die Verarbeitung von
 Mailadressen?
 
-$`(a-z)^+@(a-z).(a-z)`$
+$(a-z)^+@(a-z).(a-z)$
 
 Bitte beachten Sie, dass die Schreibweise a-z nicht unserer Definition
 genügt. Eigentlich müsste jedes Zeichen aufgeführt werden:
 
-$`a + b + c + c + \ldots + z`$ ist besser, aber immer noch nicht
-richtig. Warum?
+$a + b + c + c + \ldots + z$ ist besser, aber immer noch nicht richtig.
+Warum?
 
 Anmerkung: Diese Darstellung wird ab jetzt akzeptiert.
 
@@ -71,26 +73,24 @@ Verbessern Sie den gegebenen regulären Ausdruck.
 ## Der zweitletzte Buchstabe (1P)
 
 Entwickeln Sie einen DFA, der nur Wörter über
-$`\Sigma = \lbrace 1,2,3 \rbrace`$ akzeptiert, deren zweitletztes
-Zeichen dasselbe ist wie das zweite.
+$\Sigma = \lbrace 1,2,3 \rbrace$ akzeptiert, deren zweitletztes Zeichen
+dasselbe ist wie das zweite.
 
 ## Sprache einer regulären Grammatik (2P)
 
 Welche Sprache generiert die folgende Grammatik?
 
-``` math
-\begin{eqnarray}
+$$\begin{eqnarray}
 S &\rightarrow& a A                      \nonumber \\
 A &\rightarrow& d B \ | \ b A \ | \ c A  \nonumber \\
 B &\rightarrow& a c \ | \ b C \ | \ c A  \nonumber \\
 C &\rightarrow& \epsilon                 \nonumber
-\end{eqnarray}
-```
+\end{eqnarray}$$
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 (tests: add some no-beamer metadata, 2026-03-10)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 Tue Mar 10 15:55:30 2026 +0100 tests: add some no-beamer metadata<br></sub></sup></p></blockquote>
