@@ -69,4 +69,4 @@ jobs:
 
       - name: Check/Debug
         run: |
-          ls -la
+          ls -lags
