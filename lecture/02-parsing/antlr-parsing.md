@@ -69,8 +69,6 @@
 
 ## Hello World
 
-FOOBARWUPPIEFLUPPIE
-
 ``` antlr
 grammar Hello;
 
@@ -692,4 +690,4 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 9614622 Sat Mar 21 19:06:49 2026 +0100 test (fresh build?)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 0f0b032 Sat Mar 21 19:10:03 2026 +0100 test (fresh build ...)<br></sub></sup></p></blockquote>
