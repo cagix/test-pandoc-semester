@@ -651,6 +651,8 @@ Hier entsteht ein Tafelbild.
 
 ##### Hello World
 
+FOOBARWUPPIEFLUPPIE
+
 ``` antlr
 grammar Hello;
 
@@ -3926,19 +3928,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+-   [Turing Test version
+    3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
+    by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
+    Wikimedia Commons ([Public
+    Domain](https://en.wikipedia.org/wiki/en:public_domain))
 -   test from yaml (challenges) - should not appear in slides
 -   "Foo" by me on void.extern.com
 -   "FooFOOOO" by me on void.intern.com
 -   ["A Note About Git Commit
     Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
     by [Tim Pope](https://tpo.pe/) on tbaggery.com
--   [Turing Test version
-    3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
-    by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
-    Wikimedia Commons ([Public
-    Domain](https://en.wikipedia.org/wiki/en:public_domain))
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> d23c640 Sat Mar 21 18:22:23 2026 +0100 rename 'output_dir'/'build_path' to 'build_dir' for consistency (workflows)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 9614622 Sat Mar 21 19:06:49 2026 +0100 test (fresh build?)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 

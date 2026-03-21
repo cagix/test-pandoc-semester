@@ -1544,12 +1544,12 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
     Wikimedia Commons ([Public
     Domain](https://en.wikipedia.org/wiki/en:public_domain))
--   "Foo" by me on void.extern.com
--   test from yaml (challenges) - should not appear in slides
 -   "FooFOOOO" by me on void.intern.com
 -   ["A Note About Git Commit
     Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
     by [Tim Pope](https://tpo.pe/) on tbaggery.com
+-   "Foo" by me on void.extern.com
+-   test from yaml (challenges) - should not appear in slides
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> 2c200cb Fri Mar 20 14:38:46 2026 +0100 test: add some tests for handling relative links for docsify<br></sub></sup></p></blockquote>
 
