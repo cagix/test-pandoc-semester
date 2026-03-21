@@ -66,3 +66,7 @@ jobs:
           else
             echo "no changes to push"
           fi
+
+      - name: Check/Debug
+        run: |
+          ls -la
