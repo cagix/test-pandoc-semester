@@ -3926,12 +3926,12 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+-   test from yaml (challenges) - should not appear in slides
+-   "Foo" by me on void.extern.com
 -   "FooFOOOO" by me on void.intern.com
 -   ["A Note About Git Commit
     Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
     by [Tim Pope](https://tpo.pe/) on tbaggery.com
--   test from yaml (challenges) - should not appear in slides
--   "Foo" by me on void.extern.com
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
