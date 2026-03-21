@@ -2,9 +2,7 @@ name: Update Handout
 
 on:
   schedule:
-    # scheduled every day at 5:30 and 17:30 UTC
     - cron: "30 5,17 * * *"
-  # triggered manually
   workflow_dispatch:
 
 env:
