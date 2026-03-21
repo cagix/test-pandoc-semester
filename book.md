@@ -3926,6 +3926,9 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+-   ["A Note About Git Commit
+    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+    by [Tim Pope](https://tpo.pe/) on tbaggery.com
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
@@ -3933,12 +3936,9 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
     Domain](https://en.wikipedia.org/wiki/en:public_domain))
 -   "FooFOOOO" by me on void.intern.com
 -   "Foo" by me on void.extern.com
--   ["A Note About Git Commit
-    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-    by [Tim Pope](https://tpo.pe/) on tbaggery.com
 -   test from yaml (challenges) - should not appear in slides
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> dfc11fe Fri Mar 20 18:16:46 2026 +0100 workflow: cleanup last commit-message<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> b945973 Sat Mar 21 09:24:10 2026 +0100 re-format table (#3)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 

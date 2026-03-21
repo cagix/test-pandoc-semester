@@ -176,4 +176,4 @@ Hier steht vielleicht noch mehr - zentrales Readme mit detaillierter
 Lizenz und Credits. (Nicht mit generiertem Lizenz-Footer aus cb.yaml
 verwechseln.)
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 117341a Thu Mar 19 17:16:46 2026 +0100 tests: replace link plus image w/ image ...<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> b945973 Sat Mar 21 09:24:10 2026 +0100 re-format table (#3)<br></sub></sup></p></blockquote>
