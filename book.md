@@ -4,9 +4,11 @@
 
 ## Syllabus
 
+### Syllabus
+
 <p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/admin/images/architektur_cb.png" width="80%" /></p>
 
-### Kursbeschreibung
+#### Kursbeschreibung
 
 Der Compiler ist das wichtigste Werkzeug in der Informatik. In der
 Königsdisziplin der Informatik schließt sich der Kreis, hier kommen die
@@ -18,7 +20,7 @@ wichtigsten Konzepte im Compilerbau. Wir schauen uns dazu relevante
 aktuelle Tools und Frameworks an und setzen diese bei der Erstellung
 eines kleinen Compiler-Frontends für C++ ein.
 
-### Überblick Modulinhalte
+#### Überblick Modulinhalte
 
 Die folgenden Punkte werden wir im Laufe des Semesters diskutieren:
 
@@ -38,7 +40,7 @@ Die folgenden Punkte werden wir im Laufe des Semesters diskutieren:
     -   Interpreter: AST-Traversierung
 6.  C++ als zu verarbeitende Programmiersprache
 
-### Team
+#### Team
 
 -   [BC
     George](https://www.hsbi.de/minden/ueber-uns/personenverzeichnis/birgit-christina-george)
@@ -46,7 +48,7 @@ Die folgenden Punkte werden wir im Laufe des Semesters diskutieren:
     Gips](https://www.hsbi.de/minden/ueber-uns/personenverzeichnis/carsten-gips)
     (Sprechstunde nach Vereinbarung)
 
-### Kursformat
+#### Kursformat
 
 | Vorlesung (2 SWS) | Praktikum (2 SWS) |
 |:----------------------------------|:------------------------------------|
@@ -60,7 +62,7 @@ Online-Sitzungen per Zoom (**Zugangsdaten siehe [ILIAS IFM 3.1 CB (PO23,
 Semester)](https://www.hsbi.de/elearning/goto.php?target=crs_1400596&client_id=FH-Bielefeld)**).
 Sie *können* hierzu den Raum J101 (siehe Stundenplan) nutzen.
 
-### Fahrplan
+#### Fahrplan
 
 Hier finden Sie einen abonnierbaren [Google Kalender IFM 3.1 CB (PO23,
 3.
@@ -86,7 +88,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
 | *(Prüfungsphase II)* |  | **Parcoursprüfung: Do, 27. Mar 2025, 08-18 Uhr, mdl. Prüfung (alle Themen)** (je Prüfung ca. 45', Vergabe ca. 2 Wochen vorher) |  |  |  |
 |  |  | [TEST](#id-5ffe05b0cc6e0ec8341b3bea1c18f41cd3de0a4e) |  |  |  |
 
-### Prüfungsform, Note und Credits
+#### Prüfungsform, Note und Credits
 
 **Parcoursprüfung plus Testat**, 5 ECTS (PO23)
 
@@ -103,7 +105,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
     60% bearbeitet, fristgerechte Abgabe der Lösungen im ILIAS,
     Vorstellung der Lösungen im Praktikum)
 
-#### Prüfung im ersten Zeitraum"
+##### Prüfung im ersten Zeitraum"
 
 -   **Stationen**:
 
@@ -120,7 +122,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
     erreichbaren Punkten werden 30 Punkte als 100% gewertet, darüber
     hinausgehende Punkte bleiben als Bonuspunkte erhalten.
 
-#### Prüfung im zweiten Zeitraum"
+##### Prüfung im zweiten Zeitraum"
 
 -   **Stationen**:
     1.  Mündliche Prüfung (individuell, ca. 45 Minuten, zweiter
@@ -128,7 +130,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
 
     Die Note der mündlichen Prüfung ergibt die Gesamtnote.
 
-### Materialien
+#### Materialien
 
 1.  ["**Compilers: Principles, Techniques, and
     Tools**"](https://learning.oreilly.com/library/view/compilers-principles-techniques/9789357054881/).
@@ -158,9 +160,9 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
     über die
     [O'Reilly-Lernplattform](https://www.oreilly.com/library-access/).
 
-### Förderungen und Kooperationen
+#### Förderungen und Kooperationen
 
-#### Kooperation mit University of Alberta, Edmonton (Kanada)
+##### Kooperation mit University of Alberta, Edmonton (Kanada)
 
 Über das Projekt ["We CAN
 virtuOWL"](https://www.uni-bielefeld.de/international/profil/netzwerk/alberta-owl/we-can-virtuowl/)
@@ -173,7 +175,7 @@ Wir freuen uns, auch in diesem Semester wieder drei gemeinsame Sitzungen
 für beide Hochschulen anbieten zu können. (Diese Termine werden in
 englischer Sprache durchgeführt.)
 
-### LICENSE
+#### LICENSE
 
 <p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
@@ -3936,19 +3938,19 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
--   ["A Note About Git Commit
-    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-    by [Tim Pope](https://tpo.pe/) on tbaggery.com
 -   "Foo" by me on void.extern.com
--   test from yaml (challenges) - should not appear in slides
--   "FooFOOOO" by me on void.intern.com
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
     Wikimedia Commons ([Public
     Domain](https://en.wikipedia.org/wiki/en:public_domain))
+-   ["A Note About Git Commit
+    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+    by [Tim Pope](https://tpo.pe/) on tbaggery.com
+-   "FooFOOOO" by me on void.intern.com
+-   test from yaml (challenges) - should not appear in slides
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> abd9f51 2026-03-27 test .unnumbered for readme headings<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 0d333c0 2026-03-27 add alternative startfile readme<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 
