@@ -90,7 +90,7 @@ wieder gepusht werden.
 Ein PDA für
 $L=\lbrace ww^{R}\mid w\in \lbrace a,b\rbrace^{\ast}\rbrace$:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/pda2.png" width="45%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/pda2.png" width="45%" /></p>
 
 ### Deterministische PDAs
 
@@ -278,7 +278,7 @@ $Follow_k(\beta) = \lbrace w \in T^\ast\ |\ \exists \alpha, \gamma \in (N \cup T
 
 Hier entsteht ein Tafelbild.
 
-### Algorithmus: Konstruktion einer LL-Parsertabelle {#algorithmus-konstruktion-einer-ll-parsertabelle .fragile}
+### Algorithmus: Konstruktion einer LL-Parsertabelle
 
 **Eingabe:** Eine Grammatik $G = (N, T, P, S)$
 
@@ -302,7 +302,7 @@ enthält die zu erwartenden Eingabezeichen, wenn immer eine
 Linksableitung gebildet wird. Diese Zeichen im Stack werden mit dem
 Input gematcht.
 
-### Algorithmus: Tabellengesteuertes LL-Parsen mit einem PDA {#algorithmus-tabellengesteuertes-ll-parsen-mit-einem-pda .fragile}
+### Algorithmus: Tabellengesteuertes LL-Parsen mit einem PDA
 
 **Eingabe:** Eine Grammatik $G = (N, T, P, S)$, eine Parsertabelle $P$
 mit "$w\perp$" als initialem Kellerinhalt
@@ -406,8 +406,8 @@ Hier entsteht ein Tafelbild.
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 Sat Aug 9 09:40:07 2025 +0200 reformat using shorter lines<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 2025-08-09 reformat using shorter lines<br></sub></sup></p></blockquote>

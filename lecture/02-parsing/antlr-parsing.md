@@ -180,7 +180,7 @@ Betrachten wir erneut die obige Grammatik.
 
 Die Eingabe von "`a = 42;`" führt zu folgendem Parse-Tree:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex1.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex1.png" width="60%" /></p>
 
 Diese Eingabe führt zur Erkennung der Token `[ID, WS, =, WS, NUM, ;]`,
 wobei die `WS`-Token verworfen werden und der Parser den Tokenstream
@@ -213,7 +213,7 @@ zu `stmt - 42` vereinfachen.
 Betrachten wir nun die Eingabe `foo = 2+3*4; bar = 3*4+2;`. Diese führt
 zu folgendem Parse-Tree:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex2.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex2.png" width="60%" /></p>
 
 Wie man sehen kann, sind in der Grammatik die üblichen Vorrangregeln für
 die Operationen `+` und `*` berücksichtigt - die Multiplikation wird in
@@ -374,7 +374,7 @@ s    : expr         {List<EContext> x = $expr.ctx.e();}
 expr : e '*' e ;
 ```
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParserRuleContext.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParserRuleContext.png" width="80%" /></p>
 
 Jede Regel liefert ein passend zu dieser Regel generiertes
 Kontext-Objekt zurück. Darüber kann man das/die Kontextobjekt(e) der
@@ -445,7 +445,7 @@ ANTLR kann zu dieser Grammatik `calc.g4` einen passenden Listener
 von `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseListener`):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeListener.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeListener.png" width="80%" /></p>
 
 (Nur "interessante" Methoden gezeigt.)
 
@@ -513,7 +513,7 @@ ANTLR kann zu dieser Grammatik einen passenden Visitor (Interface
 `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseVisitor<T>`):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeVisitor.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeVisitor.png" width="80%" /></p>
 
 (Nur "interessante" Methoden gezeigt.)
 
@@ -686,8 +686,8 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> f7ac9d2 Sat Aug 9 09:40:07 2025 +0200 reformat using shorter lines<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 0f0b032 2026-03-21 test (fresh build ...)<br></sub></sup></p></blockquote>

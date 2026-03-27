@@ -339,11 +339,11 @@ implementieren.)
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 Tue Mar 10 15:55:30 2026 +0100 tests: add some no-beamer metadata<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> d4f8c91 2026-03-10 tests: add some no-beamer metadata<br></sub></sup></p></blockquote>
 
 [^1]: Um den Text lesbar zu halten, wird hier oft nur von "Parser"
     gesprochen - gemeint ist aber die gesamte auf diesem Blatt zu

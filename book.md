@@ -4,7 +4,7 @@
 
 ## Syllabus
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/admin/images/architektur_cb.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/admin/images/architektur_cb.png" width="80%" /></p>
 
 ### Kursbeschreibung
 
@@ -81,7 +81,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
 | Januar | 01 | 01.: *Weihnachtspause* |  |  |  |
 |  | 02 | 08.: *Sprechstunde/Freies Arbeiten* | Carsten | 06.: [B02](#id-0db349230022c35e045dc3b052a4faea50fe5f40) C++ | 06\. / 07. / 10. (Carsten, *online*) |
 |  | 03 | 15.: *Freies Arbeiten/Puffer* |  |  |  |
-|  | 04 | 22.: **Parcoursprüfung: Station 2 [B04](#id-6dc682255c67debc1eebb45a3920a1731f87be41) (VL- und Praktika-Slots, siehe Ankündigung)** | Carsten, BC | 20.: [B03](#id-0caafae8610423845a8dd05fc7941ec5d42fbae3) Mini-Projekt | 20\. / 21. / 24. (**15:00-16:30**) (Carsten/BC, *online*) |
+|  | 04 | 22.: **Parcoursprüfung: Station 2 ~~[B04](#id-6dc682255c67debc1eebb45a3920a1731f87be41)~~ (VL- und Praktika-Slots, siehe Ankündigung)** | Carsten, BC | 20.: [B03](#id-0caafae8610423845a8dd05fc7941ec5d42fbae3) Mini-Projekt | 20\. / 21. / 24. (**15:00-16:30**) (Carsten/BC, *online*) |
 | *(Prüfungsphase I)* | 05 | 30.: **Feedback-Gespräche (15:30 - 18:00 Uhr, online)** |  |  |  |
 | *(Prüfungsphase II)* |  | **Parcoursprüfung: Do, 27. Mar 2025, 08-18 Uhr, mdl. Prüfung (alle Themen)** (je Prüfung ca. 45', Vergabe ca. 2 Wochen vorher) |  |  |  |
 |  |  | [TEST](#id-5ffe05b0cc6e0ec8341b3bea1c18f41cd3de0a4e) |  |  |  |
@@ -175,7 +175,7 @@ englischer Sprache durchgeführt.)
 
 ### LICENSE
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under [CC BY-SA
 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -198,7 +198,7 @@ Sätze im Sinne der Sprache/Grammatik gebildet wurden. Der Parser erzeugt
 dabei den Parse-Tree. Man kann verschiedene Parser unterscheiden,
 beispielsweise die LL- und die LR-Parser.
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/architektur_cb_parser.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/architektur_cb_parser.png" width="80%" /></p>
 
 <a id="id-ed1ca9f1d126c913f7ce93106335deafa8e5a251"></a>
 
@@ -294,7 +294,7 @@ wieder gepusht werden.
 Ein PDA für
 $L=\lbrace ww^{R}\mid w\in \lbrace a,b\rbrace^{\ast}\rbrace$:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/pda2.png" width="45%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/pda2.png" width="45%" /></p>
 
 ###### Deterministische PDAs
 
@@ -482,7 +482,7 @@ $Follow_k(\beta) = \lbrace w \in T^\ast\ |\ \exists \alpha, \gamma \in (N \cup T
 
 Hier entsteht ein Tafelbild.
 
-###### Algorithmus: Konstruktion einer LL-Parsertabelle {#algorithmus-konstruktion-einer-ll-parsertabelle .fragile}
+###### Algorithmus: Konstruktion einer LL-Parsertabelle
 
 **Eingabe:** Eine Grammatik $G = (N, T, P, S)$
 
@@ -506,7 +506,7 @@ enthält die zu erwartenden Eingabezeichen, wenn immer eine
 Linksableitung gebildet wird. Diese Zeichen im Stack werden mit dem
 Input gematcht.
 
-###### Algorithmus: Tabellengesteuertes LL-Parsen mit einem PDA {#algorithmus-tabellengesteuertes-ll-parsen-mit-einem-pda .fragile}
+###### Algorithmus: Tabellengesteuertes LL-Parsen mit einem PDA
 
 **Eingabe:** Eine Grammatik $G = (N, T, P, S)$, eine Parsertabelle $P$
 mit "$w\perp$" als initialem Kellerinhalt
@@ -762,7 +762,7 @@ Betrachten wir erneut die obige Grammatik.
 
 Die Eingabe von "`a = 42;`" führt zu folgendem Parse-Tree:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex1.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex1.png" width="60%" /></p>
 
 Diese Eingabe führt zur Erkennung der Token `[ID, WS, =, WS, NUM, ;]`,
 wobei die `WS`-Token verworfen werden und der Parser den Tokenstream
@@ -795,7 +795,7 @@ zu `stmt - 42` vereinfachen.
 Betrachten wir nun die Eingabe `foo = 2+3*4; bar = 3*4+2;`. Diese führt
 zu folgendem Parse-Tree:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex2.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/hello_ex2.png" width="60%" /></p>
 
 Wie man sehen kann, sind in der Grammatik die üblichen Vorrangregeln für
 die Operationen `+` und `*` berücksichtigt - die Multiplikation wird in
@@ -956,7 +956,7 @@ s    : expr         {List<EContext> x = $expr.ctx.e();}
 expr : e '*' e ;
 ```
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParserRuleContext.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParserRuleContext.png" width="80%" /></p>
 
 Jede Regel liefert ein passend zu dieser Regel generiertes
 Kontext-Objekt zurück. Darüber kann man das/die Kontextobjekt(e) der
@@ -1027,7 +1027,7 @@ ANTLR kann zu dieser Grammatik `calc.g4` einen passenden Listener
 von `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseListener`):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeListener.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeListener.png" width="80%" /></p>
 
 (Nur "interessante" Methoden gezeigt.)
 
@@ -1095,7 +1095,7 @@ ANTLR kann zu dieser Grammatik einen passenden Visitor (Interface
 `antlr`). Weiterhin generiert ANTLR eine leere Basisimplementierung
 (Klasse `calcBaseVisitor<T>`):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeVisitor.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/02-parsing/images/ParseTreeVisitor.png" width="80%" /></p>
 
 (Nur "interessante" Methoden gezeigt.)
 
@@ -1173,7 +1173,7 @@ ANTLR sind noch viele weitere Dinge möglich. Bitte nutzen Sie aktiv die
 Dokumentation auf
 [github.com/antlr/antlr4](https://github.com/antlr/antlr4).
 
-##### Wrap-Up {#wrap-up}
+##### Wrap-Up
 
 Parser mit ANTLR generieren: Parser-Regeln werden mit
 **Kleinbuchstaben** geschrieben
@@ -1429,7 +1429,7 @@ Hier werden alle relevanten Markdown-Features getestet
 
 </p>
 
-##### Hello World {#hello-world}
+##### Hello World (Slide-Level)
 
 Hier ist normaler Markdown-Text, mit **fett** und auch *kursiv*.
 
@@ -1451,6 +1451,14 @@ Hier nochmal eine Stichpunktliste, aber ohne Leerzeile davor
 -   Stichpunkt 1
 -   Stichpunkt 2
 -   Stichpunkt 3
+
+###### Heading just below slide level (should get a number in pdf)
+
+foo bar wuppie
+
+####### Heading two levels below slide level (no numbering in pdf)
+
+wuppie fluppie!
 
 ##### Math
 
@@ -1667,7 +1675,7 @@ will appear as is (also like in LaTeX).
 
 <div style="text-align: center;">
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/img/b.png"  />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/img/b.png"  /></p>
 
 </div>
 
@@ -1890,31 +1898,31 @@ Quelle: "Foo" by me on void.extern.com
 
 ohne alles:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe 5%:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="5%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="5%" /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe ("width=15%") und titel:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="15%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="15%" /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe ("web_width=10%") und titel:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe ("width=5%" und "web_width=10%") und titel:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" /></p>
 
 ###### Images w/ `img`-Code
 
@@ -1934,7 +1942,7 @@ mit div drumherum:
 
 <div style="width: 5%;">
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p>
 
 </div>
 
@@ -1952,7 +1960,7 @@ When converting to LaTeX (PDF, Beamer), Pandoc will attempt to download
 the referred images. However, recently a lot of sites deny this. It
 seems we need to set an user-agent.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%" />
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%" /></p>
 
 Quelle: [Turing Test version
 3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
@@ -2033,23 +2041,23 @@ Diese Abbildung liegt in drei Varianten im Repo vor: transparenter
 Hintergrund, light, dark. Die Einbindung ist auf "transparent". Scale
 ist auf 60%. Die Abbildung sollte sich automatisch umstellen.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="60%" /></picture>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="60%" /></picture></p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="40%" /></picture></p><p align="center">Hier könnte ihre Werbung stehen. (40%)</p>
 
 Nachfolgend die "light"-Variante direkt (60%):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_light.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_light.png" width="60%" /></p>
 
 Nachfolgend die "dark"-Variante direkt (60%):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_dark.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_dark.png" width="60%" /></p>
 
 Nachfolgend eine Abbildung, die es nicht in light/dark im Repo gibt. Wie
 verhält sich die Preview, so lange nicht beim Übersetzen die light- und
 dark-Varianten mit generiert werden? (40%)
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/test_transparentbackground.png" width="40%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/test_transparentbackground.png" width="40%" /></p>
 
 Und noch einmal, diesmal mit Caption.
 
@@ -2067,6 +2075,8 @@ Lalelu ...
 </details>
 
 ###### Alert Extension
+
+------------------------------------------------------------------------
 
 GH introduced "alerts" with distinctive styling, like
 
@@ -2207,10 +2217,10 @@ markdown+lists_without_preceding_blankline\`:
 > foobar test
 > </details>
 
-> [!IMPORTANT]
+> [!TIP]
 >
 > <details open>
-> <summary><strong>🏅 Challenges</strong></summary>
+> <summary><strong>📖 Zum Nachlesen</strong></summary>
 > prove that $E = m c^2$.
 > </details>
 
@@ -2253,7 +2263,7 @@ properly in the whole bullet list.
 
 -   Bullet point 5 with image
 
-    <img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
+    <p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p>
 
 -   Bullet point 6 with figure
 
@@ -2532,7 +2542,7 @@ expr : e1=expr '*' e2=expr      # MUL
 
 Beim Parsen von "5\*4+3" würde dabei der folgende Parsetree entstehen:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="20%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="20%" /></p>
 
 wuppie! fluppie! foo? bar ...
 
@@ -3525,7 +3535,7 @@ Sie das Parsen des Wortes *1233*.
 
 ### Blatt 03: ANTLR
 
-#### Zusammenfassung {#zusammenfassung}
+#### Zusammenfassung
 
 Ziel dieses Aufgabenblattes ist die Erstellung eines einfachen *Pretty
 Printers* für eine einfache fiktive Sprache mit Expressions und
@@ -3547,7 +3557,7 @@ einen vereinfachten Baum, den sogenannten Abstract-Syntex-Tree (*AST*),
 transformieren und diesen erneut als formatierten Code auf der Konsole
 ausgeben.
 
-#### Methodik {#methodik}
+#### Methodik
 
 Nutzen Sie das
 [Starter-Projekt](https://github.com/Compiler-CampusMinden/CB-Vorlesung-Bachelor/tree/master/homework/src/sample_project)
@@ -3572,11 +3582,11 @@ Ihre Grammatik. Mit einer Traversierung des Baumes können Sie die
 gewünschte Ausgabe programmieren und auch die Erstellung des
 vereinfachten Baumes (AST).
 
-#### Sprachdefinition {#sprachdefinition}
+#### Sprachdefinition
 
 Ein Programm besteht aus einer oder mehreren Anweisungen (*Statements*).
 
-##### Anweisungen (*Statements*) {#anweisungen-statements}
+##### Anweisungen (*Statements*)
 
 Eine Anweisung ist eine einzeilige Befehlsfolge, beispielsweise eine
 Zuweisung oder eine Operation. Sie muss immer mit einem Newline
@@ -3589,7 +3599,7 @@ b := "foo"   # Zuweisung des Ausdrucks "foo" (String) an die Variable b
 
 Kontrollstrukturen (s.u.) zählen ebenfalls als Anweisungen.
 
-##### Ausdrücke (*Expressions*) {#ausdrücke-expressions}
+##### Ausdrücke (*Expressions*)
 
 Die einfachsten Ausdrücke sind Integer- oder String-Literale. Variablen
 sind ebenfalls Ausdrücke. Komplexere Ausdrücke werden mit Hilfe von
@@ -3604,7 +3614,7 @@ Semantik (vgl. Java, C, Python).
 Es gibt in unserer Sprache folgende Operationen mit der üblichen
 Semantik:
 
-###### Vergleichsoperatoren {#vergleichsoperatoren}
+###### Vergleichsoperatoren
 
 | Operation    | Operator |
 |:-------------|:--------:|
@@ -3613,7 +3623,7 @@ Semantik:
 | Größer       |   `>`    |
 | Kleiner      |   `<`    |
 
-###### Arithmetische Operatoren {#arithmetische-operatoren}
+###### Arithmetische Operatoren
 
 | Operation                            | Operator |
 |:-------------------------------------|:--------:|
@@ -3622,7 +3632,7 @@ Semantik:
 | Multiplikation                       |   `*`    |
 | Division                             |   `/`    |
 
-###### Beispiele für Ausdrücke {#beispiele-für-ausdrücke}
+###### Beispiele für Ausdrücke
 
 ``` python
 10 - 5  # Der Integer-Wert 5
@@ -3631,13 +3641,13 @@ a       # Wert der Variablen a
 a + b   # Ergebnis der Addition der Variablen a und b
 ```
 
-##### Bezeichner {#bezeichner}
+##### Bezeichner
 
 Werden zur Bezeichnung von Variablen verwendet. Sie bestehen aus einer
 Zeichenkette der Zeichen `a-z`,`A-Z`, `0-9`, `_`. Bezeichner dürfen
 nicht mit einer Ziffer `0-9` beginnen.
 
-##### Variablen {#variablen}
+##### Variablen
 
 Variablen bestehen aus einem eindeutigen Bezeichner (Variablennamen).
 Den Variablen können Werte zugewiesen werden und Variablen können als
@@ -3650,14 +3660,14 @@ a := 5      # Zuweisung des Wertes 5 an die Variable a
 a := 2 + 3  # Zuweisung des Wertes 5 an die Variable a
 ```
 
-##### Kommentare {#kommentare}
+##### Kommentare
 
 Kommentare werden durch das Zeichen `#` eingeleitet und umfassen
 sämtliche Zeichen bis zum nächsten Newline.
 
-##### Kontrollstrukturen {#kontrollstrukturen}
+##### Kontrollstrukturen
 
-###### While-Schleife {#while-schleife}
+###### While-Schleife
 
 While-Schleifen werden mit dem Schlüsselwort `while` eingeleitet. Sie
 bestehen im Weiteren aus einer Bedingung, die durch ein `do`
@@ -3682,7 +3692,7 @@ while a >= 0 do
 end
 ```
 
-###### Bedingte Anweisung (If-Else) {#bedingte-anweisung-if-else}
+###### Bedingte Anweisung (If-Else)
 
 Eine bedingte Anweisung besteht immer aus genau einer `if`-Anweisung,
 gefolgt von einer Bedingung, die mit einem `do` abgeschlossen wird und
@@ -3719,7 +3729,7 @@ else do
 end
 ```
 
-##### Datentypen {#datentypen}
+##### Datentypen
 
 Unsere Sprache hat zwei eingebaute Datentypen, für die entsprechende
 Literale erkannt werden müssen:
@@ -3733,7 +3743,7 @@ Die Sprache ist dynamisch typisiert, d.h. beim Parsen werden Ihnen keine
 Typ-Angaben im Code begegnen. Aber Sie müssen die entsprechenden Werte
 (Literale) parsen können.
 
-##### Beispiele {#beispiele}
+##### Beispiele
 
 ``` python
 a := "wuppie fluppie"
@@ -3748,7 +3758,7 @@ else do
 end
 ```
 
-#### Aufgaben {#aufgaben}
+#### Aufgaben
 
 ##### Grammatik (4P)
 
@@ -3920,25 +3930,25 @@ implementieren.)
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
--   test from yaml (challenges) - should not appear in slides
--   "Foo" by me on void.extern.com
--   "FooFOOOO" by me on void.intern.com
--   ["A Note About Git Commit
-    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-    by [Tim Pope](https://tpo.pe/) on tbaggery.com
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
     Wikimedia Commons ([Public
     Domain](https://en.wikipedia.org/wiki/en:public_domain))
+-   "FooFOOOO" by me on void.intern.com
+-   ["A Note About Git Commit
+    Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+    by [Tim Pope](https://tpo.pe/) on tbaggery.com
+-   test from yaml (challenges) - should not appear in slides
+-   "Foo" by me on void.extern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> d23c640 Sat Mar 21 18:22:23 2026 +0100 rename 'output_dir'/'build_path' to 'build_dir' for consistency (workflows)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> abd9f51 2026-03-27 test .unnumbered for readme headings<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 

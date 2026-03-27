@@ -174,7 +174,7 @@
 
 </p>
 
-## Hello World
+## Hello World (Slide-Level)
 
 Hier ist normaler Markdown-Text, mit **fett** und auch *kursiv*.
 
@@ -196,6 +196,14 @@ Hier nochmal eine Stichpunktliste, aber ohne Leerzeile davor
 -   Stichpunkt 1
 -   Stichpunkt 2
 -   Stichpunkt 3
+
+### Heading just below slide level (should get a number in pdf)
+
+foo bar wuppie
+
+#### Heading two levels below slide level (no numbering in pdf)
+
+wuppie fluppie!
 
 ## Math
 
@@ -618,31 +626,31 @@ Quelle: "Foo" by me on void.extern.com
 
 ohne alles:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe 5%:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="5%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="5%" /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe ("width=15%") und titel:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="15%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="15%" /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe ("web_width=10%") und titel:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" /></p>
 
 ------------------------------------------------------------------------
 
 mit breitenangabe ("width=5%" und "web_width=10%") und titel:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="10%" /></p>
 
 ### Images w/ `img`-Code
 
@@ -662,7 +670,7 @@ mit div drumherum:
 
 <div style="width: 5%;">
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p>
 
 </div>
 
@@ -680,7 +688,7 @@ When converting to LaTeX (PDF, Beamer), Pandoc will attempt to download
 the referred images. However, recently a lot of sites deny this. It
 seems we need to set an user-agent.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%" />
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png" width="20%" /></p>
 
 Quelle: [Turing Test version
 3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
@@ -761,23 +769,23 @@ Diese Abbildung liegt in drei Varianten im Repo vor: transparenter
 Hintergrund, light, dark. Die Einbindung ist auf "transparent". Scale
 ist auf 60%. Die Abbildung sollte sich automatisch umstellen.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="60%" /></picture>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="60%" /></picture></p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_inv.png" /><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki.png" width="40%" /></picture></p><p align="center">Hier könnte ihre Werbung stehen. (40%)</p>
 
 Nachfolgend die "light"-Variante direkt (60%):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_light.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_light.png" width="60%" /></p>
 
 Nachfolgend die "dark"-Variante direkt (60%):
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_dark.png" width="60%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/dimensionen-ki_dark.png" width="60%" /></p>
 
 Nachfolgend eine Abbildung, die es nicht in light/dark im Repo gibt. Wie
 verhält sich die Preview, so lange nicht beim Übersetzen die light- und
 dark-Varianten mit generiert werden? (40%)
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/test_transparentbackground.png" width="40%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/test_transparentbackground.png" width="40%" /></p>
 
 Und noch einmal, diesmal mit Caption.
 
@@ -795,6 +803,8 @@ Lalelu ...
 </details>
 
 ### Alert Extension
+
+------------------------------------------------------------------------
 
 GH introduced "alerts" with distinctive styling, like
 
@@ -935,10 +945,10 @@ markdown+lists_without_preceding_blankline\`:
 > foobar test
 > </details>
 
-> [!IMPORTANT]
+> [!TIP]
 >
 > <details open>
-> <summary><strong>🏅 Challenges</strong></summary>
+> <summary><strong>📖 Zum Nachlesen</strong></summary>
 > prove that $E = m c^2$.
 > </details>
 
@@ -981,7 +991,7 @@ properly in the whole bullet list.
 
 -   Bullet point 5 with image
 
-    <img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  />
+    <p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png"  /></p>
 
 -   Bullet point 6 with figure
 
@@ -1260,7 +1270,7 @@ expr : e1=expr '*' e2=expr      # MUL
 
 Beim Parsen von "5\*4+3" würde dabei der folgende Parsetree entstehen:
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="20%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/lecture/03-test/img/b.png" width="20%" /></p>
 
 wuppie! fluppie! foo? bar ...
 
@@ -1533,25 +1543,25 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 
 ------------------------------------------------------------------------
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
+-   test from yaml (challenges) - should not appear in slides
+-   "Foo" by me on void.extern.com
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
     Wikimedia Commons ([Public
     Domain](https://en.wikipedia.org/wiki/en:public_domain))
--   "Foo" by me on void.extern.com
--   test from yaml (challenges) - should not appear in slides
--   "FooFOOOO" by me on void.intern.com
 -   ["A Note About Git Commit
     Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
     by [Tim Pope](https://tpo.pe/) on tbaggery.com
+-   "FooFOOOO" by me on void.intern.com
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> 2c200cb Fri Mar 20 14:38:46 2026 +0100 test: add some tests for handling relative links for docsify<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> 998f4c4 2026-03-27 update test (numbering)<br></sub></sup></p></blockquote>
 
 [^1]: sometime even more often
 

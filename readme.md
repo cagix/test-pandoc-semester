@@ -1,6 +1,6 @@
 # IFM 3.1 (PO23) / IFM 5.21 (PO18): Compilerbau (Winter 2024/25)
 
-<img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/admin/images/architektur_cb.png" width="80%" />
+<p align="center"><img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_handout/admin/images/architektur_cb.png" width="80%" /></p>
 
 ## Kursbeschreibung
 
@@ -77,7 +77,7 @@ Vorstellung der Lösung im jeweiligen Praktikum in der Abgabewoche.
 | Januar | 01 | 01.: *Weihnachtspause* |  |  |  |
 |  | 02 | 08.: *Sprechstunde/Freies Arbeiten* | Carsten | 06.: [B02](homework/sheet02.md) C++ | 06\. / 07. / 10. (Carsten, *online*) |
 |  | 03 | 15.: *Freies Arbeiten/Puffer* |  |  |  |
-|  | 04 | 22.: **Parcoursprüfung: Station 2 [B04](homework/sheet04.md) (VL- und Praktika-Slots, siehe Ankündigung)** | Carsten, BC | 20.: [B03](homework/sheet03.md) Mini-Projekt | 20\. / 21. / 24. (**15:00-16:30**) (Carsten/BC, *online*) |
+|  | 04 | 22.: **Parcoursprüfung: Station 2 ~~[B04](homework/sheet04.md)~~ (VL- und Praktika-Slots, siehe Ankündigung)** | Carsten, BC | 20.: [B03](homework/sheet03.md) Mini-Projekt | 20\. / 21. / 24. (**15:00-16:30**) (Carsten/BC, *online*) |
 | *(Prüfungsphase I)* | 05 | 30.: **Feedback-Gespräche (15:30 - 18:00 Uhr, online)** |  |  |  |
 | *(Prüfungsphase II)* |  | **Parcoursprüfung: Do, 27. Mar 2025, 08-18 Uhr, mdl. Prüfung (alle Themen)** (je Prüfung ca. 45', Vergabe ca. 2 Wochen vorher) |  |  |  |
 |  |  | [TEST](lecture/03-test/test.md) |  |  |  |
@@ -167,7 +167,7 @@ englischer Sprache durchgeführt.)
 
 ## LICENSE
 
-<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  />
+<p align="center"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"  /></p>
 
 Unless otherwise noted, this work is licensed under [CC BY-SA
 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -176,4 +176,4 @@ Hier steht vielleicht noch mehr - zentrales Readme mit detaillierter
 Lizenz und Credits. (Nicht mit generiertem Lizenz-Footer aus cb.yaml
 verwechseln.)
 
-<blockquote><p><sup><sub><strong>Last modified:</strong> b945973 Sat Mar 21 09:24:10 2026 +0100 re-format table (#3)<br></sub></sup></p></blockquote>
+<blockquote><p><sup><sub><strong>Last modified:</strong> abd9f51 2026-03-27 test .unnumbered for readme headings<br></sub></sup></p></blockquote>
