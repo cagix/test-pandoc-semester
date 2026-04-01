@@ -637,6 +637,7 @@ Hier entsteht ein Tafelbild.
 > `exitAlternative`- bzw. `visitAlternative`-Methoden generiert. Für
 > benannte Regel-Elemente wird ein entsprechend benanntes Attribut im
 > Kontextobjekt angelegt, welches `public` sichtbar ist.
+>
 > </details>
 
 > [!TIP]
@@ -1245,6 +1246,7 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 >
 > (Die genauere Sprachdefinition finden Sie bei Bedarf unter
 > [craftinginterpreters.com/the-lox-language.html](https://www.craftinginterpreters.com/the-lox-language.html).)
+>
 > </details>
 
 <a id="id-1ce401405b6a7b2f25ca3e5070a1e9ac1f0afc95"></a>
@@ -1399,6 +1401,7 @@ Hier werden alle relevanten Markdown-Features getestet
 > dictum rutrum. Aliquam maximus commodo augue, ac egestas elit lobortis
 > quis. Morbi vel ex ac sapien tincidunt aliquet. Donec pharetra ac
 > felis non placerat. Integer fermentum vel velit sed auctor.
+>
 > </details>
 
 > [!TIP]
@@ -1730,27 +1733,35 @@ will appear as is (also like in LaTeX).
 -   `?raw=true`:
 
 <p align="center">
+
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b_dark.png?raw=true">
 <img src="https://github.com/cagix/test-pandoc-lecture/blob/_docsify/lecture/03-test/img/b.png?raw=true" width="15%">
 </picture>
+
 </p>
 <p align="center">
+
 foo bar wuppie fluppie
+
 </p>
 
 -   `raw.githubusercontent.com`:
 
 <p align="center">
+
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png">
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b_dark.png">
 <img src="https://raw.githubusercontent.com/cagix/test-pandoc-lecture/_docsify/lecture/03-test/img/b.png" width="5%">
 </picture>
+
 </p>
 <p align="center">
+
 foo bar wuppie fluppie
+
 </p>
 
 (Bild+Skalierung+Darkmode+Einrückung gehen auf GH und Docsify)
@@ -2069,7 +2080,9 @@ Und noch einmal, diesmal mit Caption.
 
 <details>
 <summary>
+
 Zusammenfassung: NIX :)
+
 </summary>
 
 Lalelu ...
@@ -2113,65 +2126,20 @@ if the extension `lists_without_preceding_blankline` is activated (see
 https://github.com/jgm/pandoc/issues/11534), so this will fail until
 this issue is fixed:
 
-<div class="note">
+> [!NOTE]
+> NOTE: Foo bar, wuppie fluppie!
 
-<div class="title">
+> [!TIP]
+> TIP: Foo bar, wuppie fluppie!
 
-Note
+> [!IMPORTANT]
+> IMPORTANT: Foo bar, wuppie fluppie!
 
-</div>
+> [!WARNING]
+> WARNING: Foo bar, wuppie fluppie!
 
-NOTE: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="tip">
-
-<div class="title">
-
-Tip
-
-</div>
-
-TIP: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="important">
-
-<div class="title">
-
-Important
-
-</div>
-
-IMPORTANT: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="warning">
-
-<div class="title">
-
-Warning
-
-</div>
-
-WARNING: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="caution">
-
-<div class="title">
-
-Caution
-
-</div>
-
-CAUTION: Foo bar, wuppie fluppie!
-
-</div>
+> [!CAUTION]
+> CAUTION: Foo bar, wuppie fluppie!
 
 ------------------------------------------------------------------------
 
@@ -2216,14 +2184,18 @@ markdown+lists_without_preceding_blankline\`:
 >
 > <details open>
 > <summary><strong>🎯 TL;DR</strong></summary>
+>
 > foobar test
+>
 > </details>
 
 > [!TIP]
 >
 > <details open>
 > <summary><strong>📖 Zum Nachlesen</strong></summary>
+>
 > prove that $E = m c^2$.
+>
 > </details>
 
 ------------------------------------------------------------------------
@@ -2617,11 +2589,15 @@ this is hidden content ...
 Use `details` instead:
 
 <details>
+
 this is hidden content ...
+
 </details>
 <details>
 <summary><strong>wuppie</strong></summary>
+
 this is a show-me w/ title :)
+
 </details>
 
 ------------------------------------------------------------------------
@@ -2761,6 +2737,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 > (i.e. not in license statement!).
 >
 > Quelle: test from yaml (challenges) - should not appear in slides
+>
 > </details>
 
 <a id="id-3eeb5ef519e0106480d1e04eea752d5105192e22"></a>
@@ -3939,6 +3916,8 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 **Exceptions:**
 
 -   "Foo" by me on void.extern.com
+-   "FooFOOOO" by me on void.intern.com
+-   test from yaml (challenges) - should not appear in slides
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
@@ -3947,8 +3926,6 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 -   ["A Note About Git Commit
     Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
     by [Tim Pope](https://tpo.pe/) on tbaggery.com
--   "FooFOOOO" by me on void.intern.com
--   test from yaml (challenges) - should not appear in slides
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> 0d333c0 2026-03-27 add alternative startfile readme<br></sub></sup></p></blockquote>
 

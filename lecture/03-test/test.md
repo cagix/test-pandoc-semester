@@ -142,6 +142,7 @@
 > dictum rutrum. Aliquam maximus commodo augue, ac egestas elit lobortis
 > quis. Morbi vel ex ac sapien tincidunt aliquet. Donec pharetra ac
 > felis non placerat. Integer fermentum vel velit sed auctor.
+>
 > </details>
 
 > [!TIP]
@@ -839,65 +840,20 @@ if the extension `lists_without_preceding_blankline` is activated (see
 https://github.com/jgm/pandoc/issues/11534), so this will fail until
 this issue is fixed:
 
-<div class="note">
+> [!NOTE]
+> NOTE: Foo bar, wuppie fluppie!
 
-<div class="title">
+> [!TIP]
+> TIP: Foo bar, wuppie fluppie!
 
-Note
+> [!IMPORTANT]
+> IMPORTANT: Foo bar, wuppie fluppie!
 
-</div>
+> [!WARNING]
+> WARNING: Foo bar, wuppie fluppie!
 
-NOTE: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="tip">
-
-<div class="title">
-
-Tip
-
-</div>
-
-TIP: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="important">
-
-<div class="title">
-
-Important
-
-</div>
-
-IMPORTANT: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="warning">
-
-<div class="title">
-
-Warning
-
-</div>
-
-WARNING: Foo bar, wuppie fluppie!
-
-</div>
-
-<div class="caution">
-
-<div class="title">
-
-Caution
-
-</div>
-
-CAUTION: Foo bar, wuppie fluppie!
-
-</div>
+> [!CAUTION]
+> CAUTION: Foo bar, wuppie fluppie!
 
 ------------------------------------------------------------------------
 
@@ -942,14 +898,18 @@ markdown+lists_without_preceding_blankline\`:
 >
 > <details open>
 > <summary><strong>🎯 TL;DR</strong></summary>
+>
 > foobar test
+>
 > </details>
 
 > [!TIP]
 >
 > <details open>
 > <summary><strong>📖 Zum Nachlesen</strong></summary>
+>
 > prove that $E = m c^2$.
+>
 > </details>
 
 ------------------------------------------------------------------------
@@ -1343,11 +1303,15 @@ this is hidden content ...
 Use `details` instead:
 
 <details>
+
 this is hidden content ...
+
 </details>
 <details>
 <summary><strong>wuppie</strong></summary>
+
 this is a show-me w/ title :)
+
 </details>
 
 ------------------------------------------------------------------------
@@ -1487,6 +1451,7 @@ should be added automatically and in `\scriptsize` or `<sup><sub>`
 > (i.e. not in license statement!).
 >
 > Quelle: test from yaml (challenges) - should not appear in slides
+>
 > </details>
 
 ------------------------------------------------------------------------
@@ -1549,17 +1514,17 @@ Unless otherwise noted, this work is licensed under CC BY-SA 4.0.
 
 **Exceptions:**
 
--   test from yaml (challenges) - should not appear in slides
--   "FooFOOOO" by me on void.intern.com
+-   "Foo" by me on void.extern.com
 -   ["A Note About Git Commit
     Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
     by [Tim Pope](https://tpo.pe/) on tbaggery.com
--   "Foo" by me on void.extern.com
+-   "FooFOOOO" by me on void.intern.com
 -   [Turing Test version
     3.png](https://commons.wikimedia.org/wiki/File:Turing_Test_version_3.png)
     by [Bilby](https://commons.wikimedia.org/wiki/User:Bilby) on
     Wikimedia Commons ([Public
     Domain](https://en.wikipedia.org/wiki/en:public_domain))
+-   test from yaml (challenges) - should not appear in slides
 
 <blockquote><p><sup><sub><strong>Last modified:</strong> 998f4c4 2026-03-27 update test (numbering)<br></sub></sup></p></blockquote>
 

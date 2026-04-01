@@ -53,6 +53,7 @@
 > `exitAlternative`- bzw. `visitAlternative`-Methoden generiert. Für
 > benannte Regel-Elemente wird ein entsprechend benanntes Attribut im
 > Kontextobjekt angelegt, welches `public` sichtbar ist.
+>
 > </details>
 
 > [!TIP]
@@ -661,6 +662,7 @@ Parser mit ANTLR generieren: Parser-Regeln werden mit
 >
 > (Die genauere Sprachdefinition finden Sie bei Bedarf unter
 > [craftinginterpreters.com/the-lox-language.html](https://www.craftinginterpreters.com/the-lox-language.html).)
+>
 > </details>
 
 ------------------------------------------------------------------------
